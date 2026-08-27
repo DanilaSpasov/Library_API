@@ -20,6 +20,9 @@ class UserManager(BaseUserManager):
         if not email:
             raise ValueError("Email обязателен")
 
+        extra_fields.setdefault("is_active", False)
+        extra_fields.setdefault("is_email_verified", False)
+
         email = self.normalize_email(email)
         user = self.model(email=email, **extra_fields)
         user.set_password(password)
@@ -30,6 +33,7 @@ class UserManager(BaseUserManager):
     def create_superuser(self, email, password=None, **extra_fields):
         extra_fields.setdefault("role", ROLE_ADMIN)
         extra_fields.setdefault("is_active", True)
+        extra_fields.setdefault("is_email_verified", True)
         extra_fields.setdefault("is_staff", True)
         extra_fields.setdefault("is_superuser", True)
 
@@ -38,6 +42,9 @@ class UserManager(BaseUserManager):
 
         if extra_fields.get("is_superuser") is not True:
             raise ValueError("Суперпользователь должен иметь is_superuser=True")
+
+        if extra_fields.get("is_email_verified") is not True:
+            raise ValueError("Email суперпользователя должен быть подтверждён")
 
         return self.create_user(email, password, **extra_fields)
 
@@ -57,6 +64,10 @@ class User(AbstractUser):
     )
     is_active = models.BooleanField(
         "Активен",
+        default=False,
+    )
+    is_email_verified = models.BooleanField(
+        "Email подтверждён",
         default=False,
     )
 

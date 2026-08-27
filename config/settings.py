@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/6.1/ref/settings/
 """
 
 import os
+from datetime import timedelta
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -42,9 +43,21 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "rest_framework",
     "library",
     "users",
 ]
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
+}
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=15),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=7),
+}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -131,10 +144,28 @@ STATIC_URL = "static/"
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
 
+email_backend = os.getenv(
+    "EMAIL_BACKEND",
+    "django.core.mail.backends.console.EmailBackend",
+)
+
 MAILERS = {
     "default": {
-        "BACKEND": "django.core.mail.backends.console.EmailBackend",
+        "BACKEND": email_backend,
     },
 }
+
+if email_backend == "django.core.mail.backends.smtp.EmailBackend":
+    MAILERS["default"]["OPTIONS"] = {
+        "host": os.getenv("EMAIL_HOST"),
+        "port": int(os.getenv("EMAIL_PORT", "465")),
+        "username": os.getenv("EMAIL_HOST_USER"),
+        "password": os.getenv("EMAIL_HOST_PASSWORD"),
+        "use_tls": os.getenv("EMAIL_USE_TLS", "False").lower() == "true",
+        "use_ssl": os.getenv("EMAIL_USE_SSL", "True").lower() == "true",
+    }
+
+DEFAULT_FROM_EMAIL = os.getenv("EMAIL_HOST_USER", "noreply@library.local")
+PASSWORD_RESET_TIMEOUT = 60 * 60 * 24
 
 AUTH_USER_MODEL = "users.User"
