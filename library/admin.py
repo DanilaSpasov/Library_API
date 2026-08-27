@@ -139,11 +139,9 @@ class AvailabilitySubscriptionAdmin(admin.ModelAdmin):
         "reader",
         "book",
         "created_at",
-        "is_active",
         "notified_at",
     )
     list_filter = (
-        "is_active",
         "created_at",
         "notified_at",
     )
