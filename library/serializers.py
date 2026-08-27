@@ -1,6 +1,13 @@
 from rest_framework import serializers
 
-from library.models import STATUS_AVAILABLE, Author, Book, BookCopy, Genre
+from library.models import (
+    STATUS_AVAILABLE,
+    STATUS_DAMAGED,
+    Author,
+    Book,
+    BookCopy,
+    Genre,
+)
 from users.models import ROLE_ADMIN
 
 
@@ -14,6 +21,22 @@ class BookFilterSerializer(serializers.Serializer):
         required=False,
     )
     is_available = serializers.BooleanField(required=False)
+
+
+class LoanIssueSerializer(serializers.Serializer):
+    reader_email = serializers.EmailField()
+    inventory_number = serializers.CharField(max_length=50)
+
+
+class LoanReturnSerializer(serializers.Serializer):
+    inventory_number = serializers.CharField(max_length=50)
+    status = serializers.ChoiceField(
+        choices=(
+            (STATUS_AVAILABLE, "Доступен"),
+            (STATUS_DAMAGED, "Повреждён"),
+        ),
+        default=STATUS_AVAILABLE,
+    )
 
 
 class AuthorSerializer(serializers.ModelSerializer):
