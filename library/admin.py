@@ -47,6 +47,9 @@ class BookAdmin(admin.ModelAdmin):
         "genres",
     )
 
+    def has_delete_permission(self, request, obj=None):
+        return False
+
 
 @admin.register(BookCopy)
 class BookCopyAdmin(admin.ModelAdmin):
@@ -63,6 +66,9 @@ class BookCopyAdmin(admin.ModelAdmin):
     )
     autocomplete_fields = ("book",)
     list_select_related = ("book",)
+
+    def has_delete_permission(self, request, obj=None):
+        return False
 
 
 @admin.register(Loan)

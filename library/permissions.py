@@ -1,0 +1,24 @@
+from rest_framework.permissions import BasePermission
+
+from users.models import ROLE_ADMIN, ROLE_LIBRARIAN
+
+
+class IsCatalogManager(BasePermission):
+    """Разрешает изменение каталога библиотекарю и администратору."""
+
+    message = "Изменять каталог может только библиотекарь или администратор."
+
+    def has_permission(self, request, view):
+        return request.user.is_authenticated and request.user.role in (
+            ROLE_LIBRARIAN,
+            ROLE_ADMIN,
+        )
+
+
+class IsAdminRole(BasePermission):
+    """Разрешает действие только администратору."""
+
+    message = "Это действие доступно только администратору."
+
+    def has_permission(self, request, view):
+        return request.user.is_authenticated and request.user.role == ROLE_ADMIN
