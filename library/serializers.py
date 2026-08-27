@@ -4,6 +4,18 @@ from library.models import STATUS_AVAILABLE, Author, Book, BookCopy, Genre
 from users.models import ROLE_ADMIN
 
 
+class BookFilterSerializer(serializers.Serializer):
+    author = serializers.IntegerField(
+        min_value=1,
+        required=False,
+    )
+    genre = serializers.IntegerField(
+        min_value=1,
+        required=False,
+    )
+    is_available = serializers.BooleanField(required=False)
+
+
 class AuthorSerializer(serializers.ModelSerializer):
     class Meta:
         model = Author
