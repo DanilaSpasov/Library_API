@@ -1,6 +1,14 @@
 from rest_framework import serializers
 
-from library.models import STATUS_AVAILABLE, Author, Book, BookCopy, Genre
+from library.models import (
+    STATUS_AVAILABLE,
+    STATUS_DAMAGED,
+    Author,
+    Book,
+    BookCopy,
+    Genre,
+    Loan,
+)
 from users.models import ROLE_ADMIN
 
 
@@ -14,6 +22,92 @@ class BookFilterSerializer(serializers.Serializer):
         required=False,
     )
     is_available = serializers.BooleanField(required=False)
+
+
+class LoanIssueSerializer(serializers.Serializer):
+    reader_email = serializers.EmailField()
+    inventory_number = serializers.CharField(max_length=50)
+
+
+class LoanReturnSerializer(serializers.Serializer):
+    inventory_number = serializers.CharField(max_length=50)
+    status = serializers.ChoiceField(
+        choices=(
+            (STATUS_AVAILABLE, "Доступен"),
+            (STATUS_DAMAGED, "Повреждён"),
+        ),
+        default=STATUS_AVAILABLE,
+    )
+
+
+class LoanFilterSerializer(serializers.Serializer):
+    status = serializers.ChoiceField(
+        choices=("active", "returned", "overdue"),
+        required=False,
+    )
+
+
+class ReaderLoanSerializer(serializers.ModelSerializer):
+    book_title = serializers.CharField(
+        source="book_copy.book.title",
+        read_only=True,
+    )
+    is_active = serializers.BooleanField(read_only=True)
+    is_overdue = serializers.BooleanField(read_only=True)
+
+    class Meta:
+        model = Loan
+        fields = (
+            "id",
+            "book_title",
+            "issued_at",
+            "due_at",
+            "returned_at",
+            "is_active",
+            "is_overdue",
+        )
+
+
+class StaffLoanSerializer(serializers.ModelSerializer):
+    reader_email = serializers.EmailField(
+        source="reader.email",
+        read_only=True,
+    )
+    book_title = serializers.CharField(
+        source="book_copy.book.title",
+        read_only=True,
+    )
+    inventory_number = serializers.CharField(
+        source="book_copy.inventory_number",
+        read_only=True,
+    )
+    issued_by_email = serializers.EmailField(
+        source="issued_by.email",
+        read_only=True,
+    )
+    returned_by_email = serializers.EmailField(
+        source="returned_by.email",
+        read_only=True,
+        allow_null=True,
+    )
+    is_active = serializers.BooleanField(read_only=True)
+    is_overdue = serializers.BooleanField(read_only=True)
+
+    class Meta:
+        model = Loan
+        fields = (
+            "id",
+            "reader_email",
+            "book_title",
+            "inventory_number",
+            "issued_by_email",
+            "issued_at",
+            "due_at",
+            "returned_at",
+            "returned_by_email",
+            "is_active",
+            "is_overdue",
+        )
 
 
 class AuthorSerializer(serializers.ModelSerializer):
