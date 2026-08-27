@@ -115,6 +115,15 @@ class LoanAdmin(admin.ModelAdmin):
     )
     date_hierarchy = "issued_at"
 
+    def has_add_permission(self, request):
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
     @admin.display(boolean=True, description="Активна")
     def active_status(self, obj):
         return obj.is_active

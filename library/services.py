@@ -54,11 +54,14 @@ def issue_book(*, reader_email, inventory_number, issued_by):
             .filter(inventory_number=inventory_number)
             .first()
         )
-        if book_copy is None:
-            _raise_loan_error("Экземпляр с таким инвентарным номером не найден.")
+    if book_copy is None:
+        _raise_loan_error("Экземпляр с таким инвентарным номером не найден.")
 
-        if book_copy.status != STATUS_AVAILABLE:
-            _raise_loan_error("Этот экземпляр сейчас недоступен для выдачи.")
+    if not book_copy.book.is_active:
+        _raise_loan_error("Эта книга исключена из активного каталога.")
+
+    if book_copy.status != STATUS_AVAILABLE:
+        _raise_loan_error("Этот экземпляр сейчас недоступен для выдачи.")
 
         active_loans = Loan.objects.filter(
             reader=reader,

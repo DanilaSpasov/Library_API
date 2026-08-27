@@ -1,16 +1,26 @@
 from rest_framework import filters, mixins, viewsets
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from rest_framework.status import HTTP_200_OK, HTTP_201_CREATED
+from rest_framework.views import APIView
+from django.utils import timezone
 
-from library.models import STATUS_AVAILABLE, Author, Book, BookCopy, Genre
+from library.models import STATUS_AVAILABLE, Author, Book, BookCopy, Genre, Loan
 from library.paginators import CatalogPagination
-from library.permissions import IsCatalogManager
+from library.permissions import IsCatalogManager, IsLibrarianOrAdmin
 from library.serializers import (
     AuthorSerializer,
     BookFilterSerializer,
     BookCopySerializer,
     BookSerializer,
     GenreSerializer,
+    LoanFilterSerializer,
+    LoanIssueSerializer,
+    LoanReturnSerializer,
+    ReaderLoanSerializer,
+    StaffLoanSerializer,
 )
+from library.services import issue_book, return_book
 from users.models import ROLE_ADMIN, ROLE_LIBRARIAN
 
 
@@ -109,3 +119,88 @@ class BookCopyViewSet(CatalogViewSet):
 
     def get_permissions(self):
         return [permission() for permission in self.permission_classes]
+
+
+class LoanViewSet(viewsets.ReadOnlyModelViewSet):
+    permission_classes = (IsAuthenticated,)
+    pagination_class = CatalogPagination
+    filter_backends = (filters.SearchFilter, filters.OrderingFilter)
+    search_fields = (
+        "reader__email",
+        "book_copy__book__title",
+        "book_copy__inventory_number",
+    )
+    ordering_fields = ("issued_at", "due_at", "returned_at")
+    ordering = ("-issued_at",)
+
+    def get_queryset(self):
+        queryset = Loan.objects.select_related(
+            "reader",
+            "book_copy",
+            "book_copy__book",
+            "issued_by",
+            "returned_by",
+        )
+
+        if self.request.user.role not in (ROLE_LIBRARIAN, ROLE_ADMIN):
+            queryset = queryset.filter(reader=self.request.user)
+
+        filter_serializer = LoanFilterSerializer(data=self.request.query_params.dict())
+        filter_serializer.is_valid(raise_exception=True)
+        loan_status = filter_serializer.validated_data.get("status")
+
+        if loan_status == "active":
+            queryset = queryset.filter(returned_at__isnull=True)
+        elif loan_status == "returned":
+            queryset = queryset.filter(returned_at__isnull=False)
+        elif loan_status == "overdue":
+            queryset = queryset.filter(
+                returned_at__isnull=True,
+                due_at__lt=timezone.now(),
+            )
+
+        return queryset
+
+    def get_serializer_class(self):
+        if self.request.user.role in (ROLE_LIBRARIAN, ROLE_ADMIN):
+            return StaffLoanSerializer
+
+        return ReaderLoanSerializer
+
+
+class LoanIssueAPIView(APIView):
+    permission_classes = (IsLibrarianOrAdmin,)
+
+    def post(self, request):
+        serializer = LoanIssueSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        loan = issue_book(
+            reader_email=serializer.validated_data["reader_email"],
+            inventory_number=serializer.validated_data["inventory_number"],
+            issued_by=request.user,
+        )
+
+        return Response(
+            StaffLoanSerializer(loan).data,
+            status=HTTP_201_CREATED,
+        )
+
+
+class LoanReturnAPIView(APIView):
+    permission_classes = (IsLibrarianOrAdmin,)
+
+    def post(self, request):
+        serializer = LoanReturnSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        loan = return_book(
+            inventory_number=serializer.validated_data["inventory_number"],
+            returned_by=request.user,
+            return_status=serializer.validated_data["status"],
+        )
+
+        return Response(
+            StaffLoanSerializer(loan).data,
+            status=HTTP_200_OK,
+        )

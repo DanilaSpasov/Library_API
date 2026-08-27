@@ -7,6 +7,7 @@ from library.models import (
     Book,
     BookCopy,
     Genre,
+    Loan,
 )
 from users.models import ROLE_ADMIN
 
@@ -37,6 +38,76 @@ class LoanReturnSerializer(serializers.Serializer):
         ),
         default=STATUS_AVAILABLE,
     )
+
+
+class LoanFilterSerializer(serializers.Serializer):
+    status = serializers.ChoiceField(
+        choices=("active", "returned", "overdue"),
+        required=False,
+    )
+
+
+class ReaderLoanSerializer(serializers.ModelSerializer):
+    book_title = serializers.CharField(
+        source="book_copy.book.title",
+        read_only=True,
+    )
+    is_active = serializers.BooleanField(read_only=True)
+    is_overdue = serializers.BooleanField(read_only=True)
+
+    class Meta:
+        model = Loan
+        fields = (
+            "id",
+            "book_title",
+            "issued_at",
+            "due_at",
+            "returned_at",
+            "is_active",
+            "is_overdue",
+        )
+
+
+class StaffLoanSerializer(serializers.ModelSerializer):
+    reader_email = serializers.EmailField(
+        source="reader.email",
+        read_only=True,
+    )
+    book_title = serializers.CharField(
+        source="book_copy.book.title",
+        read_only=True,
+    )
+    inventory_number = serializers.CharField(
+        source="book_copy.inventory_number",
+        read_only=True,
+    )
+    issued_by_email = serializers.EmailField(
+        source="issued_by.email",
+        read_only=True,
+    )
+    returned_by_email = serializers.EmailField(
+        source="returned_by.email",
+        read_only=True,
+        allow_null=True,
+    )
+    is_active = serializers.BooleanField(read_only=True)
+    is_overdue = serializers.BooleanField(read_only=True)
+
+    class Meta:
+        model = Loan
+        fields = (
+            "id",
+            "reader_email",
+            "book_title",
+            "inventory_number",
+            "issued_by_email",
+            "issued_at",
+            "due_at",
+            "returned_at",
+            "returned_by_email",
+            "is_active",
+            "is_overdue",
+        )
 
 
 class AuthorSerializer(serializers.ModelSerializer):
