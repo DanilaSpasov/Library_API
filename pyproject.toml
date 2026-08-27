@@ -11,7 +11,9 @@ dependencies = [
     "django (>=6.1,<7.0)",
     "python-dotenv (>=1.2,<2.0)",
     "black (>=26.5.1,<27.0.0)",
-    "psycopg[binary] (>=3.3.4,<4.0.0)"
+    "psycopg[binary] (>=3.3.4,<4.0.0)",
+    "djangorestframework (>=3.18.0,<4.0.0)",
+    "djangorestframework-simplejwt (>=5.5.1,<6.0.0)"
 ]
 
 
