@@ -1,6 +1,7 @@
 from django.contrib import admin
 
 from library.models import (
+    STATUS_AVAILABLE,
     Author,
     AvailabilitySubscription,
     Book,
@@ -8,6 +9,7 @@ from library.models import (
     Genre,
     Loan,
 )
+from library.tasks import send_availability_notifications
 
 
 @admin.register(Author)
@@ -69,6 +71,21 @@ class BookCopyAdmin(admin.ModelAdmin):
 
     def has_delete_permission(self, request, obj=None):
         return False
+
+    def save_model(self, request, obj, form, change):
+        previous_status = None
+
+        if change:
+            previous_status = (
+                BookCopy.objects.filter(id=obj.id)
+                .values_list("status", flat=True)
+                .first()
+            )
+
+        super().save_model(request, obj, form, change)
+
+        if previous_status != STATUS_AVAILABLE and obj.status == STATUS_AVAILABLE:
+            send_availability_notifications.delay(obj.book_id)
 
 
 @admin.register(Loan)

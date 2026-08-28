@@ -30,6 +30,7 @@ from library.serializers import (
     StaffLoanSerializer,
 )
 from library.services import issue_book, return_book
+from library.tasks import send_availability_notifications
 from users.models import ROLE_ADMIN, ROLE_LIBRARIAN
 
 
@@ -128,6 +129,19 @@ class BookCopyViewSet(CatalogViewSet):
 
     def get_permissions(self):
         return [permission() for permission in self.permission_classes]
+
+    def perform_create(self, serializer):
+        book_copy = serializer.save()
+
+        if book_copy.status == STATUS_AVAILABLE:
+            send_availability_notifications.delay(book_copy.book_id)
+
+    def perform_update(self, serializer):
+        previous_status = serializer.instance.status
+        book_copy = serializer.save()
+
+        if previous_status != STATUS_AVAILABLE and book_copy.status == STATUS_AVAILABLE:
+            send_availability_notifications.delay(book_copy.book_id)
 
 
 class LoanViewSet(viewsets.ReadOnlyModelViewSet):
