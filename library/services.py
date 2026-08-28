@@ -12,6 +12,7 @@ from library.models import (
     BookCopy,
     Loan,
 )
+from library.tasks import send_availability_notifications
 from users.models import ROLE_ADMIN, ROLE_LIBRARIAN, ROLE_READER, User
 
 logger = logging.getLogger(__name__)
@@ -33,7 +34,7 @@ def _validate_library_staff(user):
         )
 
 
-def issue_book(*, reader_email, inventory_number, issued_by):
+def issue_book(reader_email, inventory_number, issued_by):
     with transaction.atomic():
         _validate_library_staff(issued_by)
 
@@ -54,14 +55,14 @@ def issue_book(*, reader_email, inventory_number, issued_by):
             .filter(inventory_number=inventory_number)
             .first()
         )
-    if book_copy is None:
-        _raise_loan_error("Экземпляр с таким инвентарным номером не найден.")
+        if book_copy is None:
+            _raise_loan_error("Экземпляр с таким инвентарным номером не найден.")
 
-    if not book_copy.book.is_active:
-        _raise_loan_error("Эта книга исключена из активного каталога.")
+        if not book_copy.book.is_active:
+            _raise_loan_error("Эта книга исключена из активного каталога.")
 
-    if book_copy.status != STATUS_AVAILABLE:
-        _raise_loan_error("Этот экземпляр сейчас недоступен для выдачи.")
+        if book_copy.status != STATUS_AVAILABLE:
+            _raise_loan_error("Этот экземпляр сейчас недоступен для выдачи.")
 
         active_loans = Loan.objects.filter(
             reader=reader,
@@ -95,7 +96,6 @@ def issue_book(*, reader_email, inventory_number, issued_by):
 
 
 def return_book(
-    *,
     inventory_number,
     returned_by,
     return_status=STATUS_AVAILABLE,
@@ -139,5 +139,8 @@ def return_book(
         loan.pk,
         returned_by.pk,
     )
+
+    if return_status == STATUS_AVAILABLE:
+        send_availability_notifications.delay(book_copy.book_id)
 
     return loan
