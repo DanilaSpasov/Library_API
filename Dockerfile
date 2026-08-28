@@ -4,11 +4,15 @@ WORKDIR /app
 
 RUN pip install --no-cache-dir poetry==2.2.1
 
-COPY pyproject.toml poetry.lock ./
+RUN useradd --create-home appuser && chown -R appuser:appuser /app
+
+USER appuser
+
+COPY --chown=appuser:appuser pyproject.toml poetry.lock ./
 
 RUN poetry install --only main --no-root --no-interaction --no-ansi
 
-COPY . .
+COPY --chown=appuser:appuser . .
 
 EXPOSE 8000
 
