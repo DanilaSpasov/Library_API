@@ -1,6 +1,15 @@
 from rest_framework.permissions import BasePermission
 
-from users.models import ROLE_ADMIN, ROLE_LIBRARIAN
+from users.models import ROLE_ADMIN, ROLE_LIBRARIAN, ROLE_READER
+
+
+class IsReader(BasePermission):
+    """Разрешает действие только читателю."""
+
+    message = "Действие доступно только читателю."
+
+    def has_permission(self, request, view):
+        return request.user.is_authenticated and request.user.role == ROLE_READER
 
 
 class IsLibrarianOrAdmin(BasePermission):

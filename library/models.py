@@ -228,10 +228,6 @@ class AvailabilitySubscription(models.Model):
         null=True,
         blank=True,
     )
-    is_active = models.BooleanField(
-        "Активна",
-        default=True,
-    )
 
     class Meta:
         verbose_name = "Подписка на доступность"
@@ -239,8 +235,8 @@ class AvailabilitySubscription(models.Model):
         constraints = [
             models.UniqueConstraint(
                 fields=["reader", "book"],
-                condition=models.Q(is_active=True),
-                name="unique_active_subscription_per_reader_book",
+                condition=models.Q(notified_at__isnull=True),
+                name="unique_pending_subscription_per_reader_book",
             ),
         ]
 
