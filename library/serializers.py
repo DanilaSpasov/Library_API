@@ -8,6 +8,7 @@ from library.models import (
     BookCopy,
     Genre,
     Loan,
+    AvailabilitySubscription,
 )
 from users.models import ROLE_ADMIN
 
@@ -108,6 +109,51 @@ class StaffLoanSerializer(serializers.ModelSerializer):
             "is_active",
             "is_overdue",
         )
+
+
+class AvailabilitySubscriptionSerializer(serializers.ModelSerializer):
+    book_id = serializers.PrimaryKeyRelatedField(
+        source="book",
+        queryset=Book.objects.filter(is_active=True),
+    )
+    book_title = serializers.CharField(
+        source="book.title",
+        read_only=True,
+    )
+
+    class Meta:
+        model = AvailabilitySubscription
+        fields = (
+            "id",
+            "book_id",
+            "book_title",
+            "created_at",
+            "notified_at",
+        )
+        read_only_fields = (
+            "created_at",
+            "notified_at",
+        )
+
+    def validate(self, data):
+        book = data["book"]
+        request = self.context["request"]
+
+        if book.copies.filter(status=STATUS_AVAILABLE).exists():
+            raise serializers.ValidationError(
+                {"book_id": "Книга уже доступна для выдачи."}
+            )
+
+        if AvailabilitySubscription.objects.filter(
+            reader=request.user,
+            book=book,
+            notified_at__isnull=True,
+        ).exists():
+            raise serializers.ValidationError(
+                {"book_id": "Вы уже подписаны на эту книгу."}
+            )
+
+        return data
 
 
 class AuthorSerializer(serializers.ModelSerializer):

@@ -3,6 +3,7 @@ from rest_framework.routers import DefaultRouter
 
 from library.views import (
     AuthorViewSet,
+    AvailabilitySubscriptionViewSet,
     BookCopyViewSet,
     BookViewSet,
     GenreViewSet,
@@ -13,18 +14,20 @@ from library.views import (
 
 app_name = "library"
 
-catalog_router = DefaultRouter()
-catalog_router.register("authors", AuthorViewSet, basename="authors")
-catalog_router.register("genres", GenreViewSet, basename="genres")
-catalog_router.register("books", BookViewSet, basename="books")
-catalog_router.register("book-copies", BookCopyViewSet, basename="book-copies")
-
-loan_router = DefaultRouter()
-loan_router.register("", LoanViewSet, basename="loan")
+router = DefaultRouter()
+router.register("catalog/authors", AuthorViewSet, basename="authors")
+router.register("catalog/genres", GenreViewSet, basename="genres")
+router.register("catalog/books", BookViewSet, basename="books")
+router.register("catalog/book-copies", BookCopyViewSet, basename="book-copies")
+router.register("loans", LoanViewSet, basename="loan")
+router.register(
+    "subscriptions",
+    AvailabilitySubscriptionViewSet,
+    basename="subscription",
+)
 
 urlpatterns = [
-    path("catalog/", include(catalog_router.urls)),
     path("loans/issue/", LoanIssueAPIView.as_view(), name="loan-issue"),
     path("loans/return/", LoanReturnAPIView.as_view(), name="loan-return"),
-    path("loans/", include(loan_router.urls)),
+    path("", include(router.urls)),
 ]

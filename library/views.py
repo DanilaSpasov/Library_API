@@ -5,11 +5,20 @@ from rest_framework.status import HTTP_200_OK, HTTP_201_CREATED
 from rest_framework.views import APIView
 from django.utils import timezone
 
-from library.models import STATUS_AVAILABLE, Author, Book, BookCopy, Genre, Loan
+from library.models import (
+    STATUS_AVAILABLE,
+    Author,
+    AvailabilitySubscription,
+    Book,
+    BookCopy,
+    Genre,
+    Loan,
+)
 from library.paginators import CatalogPagination
-from library.permissions import IsCatalogManager, IsLibrarianOrAdmin
+from library.permissions import IsCatalogManager, IsLibrarianOrAdmin, IsReader
 from library.serializers import (
     AuthorSerializer,
+    AvailabilitySubscriptionSerializer,
     BookFilterSerializer,
     BookCopySerializer,
     BookSerializer,
@@ -204,3 +213,27 @@ class LoanReturnAPIView(APIView):
             StaffLoanSerializer(loan).data,
             status=HTTP_200_OK,
         )
+
+
+class AvailabilitySubscriptionViewSet(
+    mixins.CreateModelMixin,
+    mixins.ListModelMixin,
+    mixins.DestroyModelMixin,
+    viewsets.GenericViewSet,
+):
+    serializer_class = AvailabilitySubscriptionSerializer
+    permission_classes = (IsReader,)
+    pagination_class = CatalogPagination
+
+    def get_queryset(self):
+        return (
+            AvailabilitySubscription.objects.filter(
+                reader=self.request.user,
+                notified_at__isnull=True,
+            )
+            .select_related("book")
+            .order_by("-created_at")
+        )
+
+    def perform_create(self, serializer):
+        serializer.save(reader=self.request.user)
