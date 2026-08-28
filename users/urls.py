@@ -8,7 +8,7 @@ app_name = "users"
 urlpatterns = [
     path("register/", UserRegistrationView.as_view(), name="register"),
     path(
-        "verify-email/<uidb64>/<token>/",
+        "verify-email/<str:uidb64>/<str:token>/",
         UserEmailVerificationView.as_view(),
         name="verify_email",
     ),

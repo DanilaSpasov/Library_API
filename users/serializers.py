@@ -4,6 +4,10 @@ from rest_framework import serializers
 from users.models import User
 
 
+class EmailVerificationResponseSerializer(serializers.Serializer):
+    detail = serializers.CharField()
+
+
 class UserRegistrationSerializer(serializers.ModelSerializer):
     password = serializers.CharField(
         write_only=True,

@@ -7,6 +7,7 @@ from django.db import transaction
 from django.urls import reverse
 from django.utils.encoding import force_bytes, force_str
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
+from drf_spectacular.utils import extend_schema
 from rest_framework import status
 from rest_framework.exceptions import APIException
 from rest_framework.generics import CreateAPIView
@@ -15,7 +16,10 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from users.models import User
-from users.serializers import UserRegistrationSerializer
+from users.serializers import (
+    EmailVerificationResponseSerializer,
+    UserRegistrationSerializer,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -64,6 +68,13 @@ class UserRegistrationView(CreateAPIView):
 class UserEmailVerificationView(APIView):
     permission_classes = (AllowAny,)
 
+    @extend_schema(
+        summary="Подтверждение email",
+        responses={
+            200: EmailVerificationResponseSerializer,
+            400: EmailVerificationResponseSerializer,
+        },
+    )
     def get(self, request, uidb64, token):
         try:
             user_id = force_str(urlsafe_base64_decode(uidb64))
