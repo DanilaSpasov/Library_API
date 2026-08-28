@@ -218,10 +218,10 @@ class BookSerializer(serializers.ModelSerializer):
             "is_available",
         )
 
-    def get_available_copies_count(self, obj):
+    def get_available_copies_count(self, obj) -> int:
         return obj.copies.filter(status=STATUS_AVAILABLE).count()
 
-    def get_is_available(self, obj):
+    def get_is_available(self, obj) -> bool:
         return self.get_available_copies_count(obj) > 0
 
     def validate_is_active(self, value):

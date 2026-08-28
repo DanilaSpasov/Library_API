@@ -1,9 +1,10 @@
+from django.utils import timezone
+from drf_spectacular.utils import extend_schema
 from rest_framework import filters, mixins, viewsets
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.status import HTTP_200_OK, HTTP_201_CREATED
 from rest_framework.views import APIView
-from django.utils import timezone
 
 from library.models import (
     STATUS_AVAILABLE,
@@ -73,6 +74,7 @@ class GenreViewSet(CatalogViewSet):
 
 
 class BookViewSet(CatalogViewSet):
+    queryset = Book.objects.all()
     serializer_class = BookSerializer
     filter_backends = (filters.SearchFilter, filters.OrderingFilter)
     search_fields = (
@@ -145,6 +147,7 @@ class BookCopyViewSet(CatalogViewSet):
 
 
 class LoanViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Loan.objects.all()
     permission_classes = (IsAuthenticated,)
     pagination_class = CatalogPagination
     filter_backends = (filters.SearchFilter, filters.OrderingFilter)
@@ -185,7 +188,9 @@ class LoanViewSet(viewsets.ReadOnlyModelViewSet):
         return queryset
 
     def get_serializer_class(self):
-        if self.request.user.role in (ROLE_LIBRARIAN, ROLE_ADMIN):
+        user_role = getattr(self.request.user, "role", None)
+
+        if user_role in (ROLE_LIBRARIAN, ROLE_ADMIN):
             return StaffLoanSerializer
 
         return ReaderLoanSerializer
@@ -194,6 +199,11 @@ class LoanViewSet(viewsets.ReadOnlyModelViewSet):
 class LoanIssueAPIView(APIView):
     permission_classes = (IsLibrarianOrAdmin,)
 
+    @extend_schema(
+        summary="Выдача книги",
+        request=LoanIssueSerializer,
+        responses={201: StaffLoanSerializer},
+    )
     def post(self, request):
         serializer = LoanIssueSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -213,6 +223,11 @@ class LoanIssueAPIView(APIView):
 class LoanReturnAPIView(APIView):
     permission_classes = (IsLibrarianOrAdmin,)
 
+    @extend_schema(
+        summary="Возврат книги",
+        request=LoanReturnSerializer,
+        responses={200: StaffLoanSerializer},
+    )
     def post(self, request):
         serializer = LoanReturnSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -235,6 +250,7 @@ class AvailabilitySubscriptionViewSet(
     mixins.DestroyModelMixin,
     viewsets.GenericViewSet,
 ):
+    queryset = AvailabilitySubscription.objects.all()
     serializer_class = AvailabilitySubscriptionSerializer
     permission_classes = (IsReader,)
     pagination_class = CatalogPagination
