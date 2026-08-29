@@ -23,11 +23,13 @@ RETURN_STATUSES = (STATUS_AVAILABLE, STATUS_DAMAGED)
 
 
 def _raise_loan_error(message):
+    """Записывает причину отказа и возвращает ошибку валидации."""
     logger.warning("Операция с выдачей отклонена: %s", message)
     raise ValidationError({"detail": message})
 
 
 def _validate_library_staff(user):
+    """Проверяет право пользователя выдавать и принимать книги."""
     if user.role not in (ROLE_LIBRARIAN, ROLE_ADMIN):
         _raise_loan_error(
             "Выдавать и принимать книги может только библиотекарь " "или администратор."
@@ -35,6 +37,7 @@ def _validate_library_staff(user):
 
 
 def issue_book(reader_email, inventory_number, issued_by):
+    """Выдаёт доступный экземпляр активному читателю."""
     with transaction.atomic():
         _validate_library_staff(issued_by)
 
@@ -100,6 +103,7 @@ def return_book(
     returned_by,
     return_status=STATUS_AVAILABLE,
 ):
+    """Закрывает активную выдачу и обновляет состояние экземпляра."""
     with transaction.atomic():
         _validate_library_staff(returned_by)
 

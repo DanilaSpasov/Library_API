@@ -168,3 +168,14 @@ Authorization: Bearer <access_token>
 - `http://127.0.0.1:8000/api/docs/` — Swagger UI;
 - `http://127.0.0.1:8000/api/schema/` — OpenAPI-схема;
 - `http://127.0.0.1:8000/admin/` — Django Admin.
+
+## Тесты
+
+Запустить тесты и посмотреть покрытие кода:
+
+```
+poetry run coverage run manage.py test
+poetry run coverage report
+```
+
+Текущий набор содержит 28 тестов. Обычный отчёт `coverage` показывает 85%.

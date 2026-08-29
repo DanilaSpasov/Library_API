@@ -27,10 +27,13 @@ logger = logging.getLogger(__name__)
 
 
 class UserRegistrationView(CreateAPIView):
+    """Регистрирует пользователя и отправляет письмо подтверждения."""
+
     serializer_class = UserRegistrationSerializer
     permission_classes = (AllowAny,)
 
     def perform_create(self, serializer):
+        """Сохраняет пользователя и отправляет ссылку подтверждения."""
         user = None
 
         try:
@@ -68,6 +71,8 @@ class UserRegistrationView(CreateAPIView):
 
 
 class UserEmailVerificationView(APIView):
+    """Подтверждает email пользователя по одноразовой ссылке."""
+
     permission_classes = (AllowAny,)
 
     @extend_schema(
@@ -78,6 +83,7 @@ class UserEmailVerificationView(APIView):
         },
     )
     def get(self, request, uidb64, token):
+        """Проверяет токен и активирует пользователя."""
         try:
             user_id = force_str(urlsafe_base64_decode(uidb64))
             user = User.objects.get(pk=user_id)
@@ -113,6 +119,8 @@ class UserEmailVerificationView(APIView):
 
 
 class TelegramConnectionCodeView(APIView):
+    """Возвращает код для привязки Telegram-аккаунта."""
+
     permission_classes = (IsAuthenticated,)
 
     @extend_schema(
@@ -120,6 +128,7 @@ class TelegramConnectionCodeView(APIView):
         responses={201: TelegramConnectionCodeSerializer},
     )
     def post(self, request):
+        """Создаёт новый одноразовый код подключения."""
         code, expires_at = create_connection_code(request.user)
         serializer = TelegramConnectionCodeSerializer(
             {"code": code, "expires_at": expires_at}

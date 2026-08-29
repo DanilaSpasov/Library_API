@@ -6,6 +6,8 @@ from users.models import TelegramConnectionCode, User
 
 @admin.register(User)
 class UserAdmin(BaseUserAdmin):
+    """Настройки отображения пользователей в админ-панели."""
+
     ordering = ("email",)
     list_display = (
         "email",
@@ -105,6 +107,8 @@ class UserAdmin(BaseUserAdmin):
 
 @admin.register(TelegramConnectionCode)
 class TelegramConnectionCodeAdmin(admin.ModelAdmin):
+    """Настройки отображения Telegram-кодов в админ-панели."""
+
     list_display = ("user", "created_at", "expires_at")
     search_fields = ("user__email",)
     readonly_fields = ("user", "code_hash", "created_at", "expires_at")

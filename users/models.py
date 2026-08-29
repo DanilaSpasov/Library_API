@@ -17,6 +17,7 @@ class UserManager(BaseUserManager):
     """Менеджер пользователей с авторизацией по email."""
 
     def create_user(self, email, password=None, **extra_fields):
+        """Создаёт обычного пользователя с авторизацией по email."""
         if not email:
             raise ValueError("Email обязателен")
 
@@ -31,6 +32,7 @@ class UserManager(BaseUserManager):
         return user
 
     def create_superuser(self, email, password=None, **extra_fields):
+        """Создаёт суперпользователя с правами администратора."""
         extra_fields.setdefault("role", ROLE_ADMIN)
         extra_fields.setdefault("is_active", True)
         extra_fields.setdefault("is_email_verified", True)
@@ -50,6 +52,8 @@ class UserManager(BaseUserManager):
 
 
 class User(AbstractUser):
+    """Пользователь библиотеки с авторизацией по email."""
+
     username = None
 
     email = models.EmailField(
@@ -83,14 +87,19 @@ class User(AbstractUser):
     objects = UserManager()
 
     class Meta:
+        """Названия модели пользователя в админ-панели."""
+
         verbose_name = "Пользователь"
         verbose_name_plural = "Пользователи"
 
     def __str__(self):
+        """Возвращает email пользователя."""
         return self.email
 
 
 class TelegramConnectionCode(models.Model):
+    """Одноразовый код для привязки Telegram-аккаунта."""
+
     user = models.OneToOneField(
         User,
         on_delete=models.CASCADE,
@@ -106,8 +115,11 @@ class TelegramConnectionCode(models.Model):
     created_at = models.DateTimeField("Создан", auto_now_add=True)
 
     class Meta:
+        """Названия модели Telegram-кода в админ-панели."""
+
         verbose_name = "Код подключения Telegram"
         verbose_name_plural = "Коды подключения Telegram"
 
     def __str__(self):
+        """Возвращает описание кода подключения."""
         return f"Код подключения для {self.user}"

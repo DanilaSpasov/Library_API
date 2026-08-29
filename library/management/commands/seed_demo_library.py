@@ -12,9 +12,12 @@ from library.models import (
 
 
 class Command(BaseCommand):
+    """Заполняет базу демонстрационными библиотечными данными."""
+
     help = "Удаляет старые данные библиотеки и создаёт демонстрационный каталог"
 
     def handle(self, *args, **options):
+        """Очищает библиотечные таблицы и загружает фикстуру."""
         AvailabilitySubscription.objects.all().delete()
         Loan.objects.all().delete()
         BookCopy.objects.all().delete()

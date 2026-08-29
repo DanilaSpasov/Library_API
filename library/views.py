@@ -47,6 +47,7 @@ class CatalogViewSet(
     pagination_class = CatalogPagination
 
     def get_permissions(self):
+        """Возвращает права для чтения или изменения каталога."""
         if self.action in ("list", "retrieve"):
             permission_classes = (IsAuthenticated,)
         else:
@@ -56,6 +57,8 @@ class CatalogViewSet(
 
 
 class AuthorViewSet(CatalogViewSet):
+    """Возвращает и изменяет авторов каталога."""
+
     queryset = Author.objects.all().order_by("full_name")
     serializer_class = AuthorSerializer
     filter_backends = (filters.SearchFilter, filters.OrderingFilter)
@@ -65,6 +68,8 @@ class AuthorViewSet(CatalogViewSet):
 
 
 class GenreViewSet(CatalogViewSet):
+    """Возвращает и изменяет жанры каталога."""
+
     queryset = Genre.objects.all().order_by("name")
     serializer_class = GenreSerializer
     filter_backends = (filters.SearchFilter, filters.OrderingFilter)
@@ -74,6 +79,8 @@ class GenreViewSet(CatalogViewSet):
 
 
 class BookViewSet(CatalogViewSet):
+    """Возвращает, фильтрует и изменяет книги."""
+
     queryset = Book.objects.all()
     serializer_class = BookSerializer
     filter_backends = (filters.SearchFilter, filters.OrderingFilter)
@@ -90,6 +97,7 @@ class BookViewSet(CatalogViewSet):
     ordering = ("title",)
 
     def get_queryset(self):
+        """Фильтрует книги по роли и параметрам запроса."""
         queryset = Book.objects.prefetch_related("authors", "genres")
 
         if self.request.user.role not in (ROLE_LIBRARIAN, ROLE_ADMIN):
@@ -117,6 +125,8 @@ class BookViewSet(CatalogViewSet):
 
 
 class BookCopyViewSet(CatalogViewSet):
+    """Управляет физическими экземплярами книг."""
+
     queryset = BookCopy.objects.select_related("book").order_by("inventory_number")
     serializer_class = BookCopySerializer
     permission_classes = (IsCatalogManager,)
@@ -130,15 +140,18 @@ class BookCopyViewSet(CatalogViewSet):
     ordering = ("inventory_number",)
 
     def get_permissions(self):
+        """Возвращает права управления экземплярами."""
         return [permission() for permission in self.permission_classes]
 
     def perform_create(self, serializer):
+        """Сохраняет экземпляр и запускает уведомление при доступности."""
         book_copy = serializer.save()
 
         if book_copy.status == STATUS_AVAILABLE:
             send_availability_notifications.delay(book_copy.book_id)
 
     def perform_update(self, serializer):
+        """Запускает уведомление после появления доступного экземпляра."""
         previous_status = serializer.instance.status
         book_copy = serializer.save()
 
@@ -147,6 +160,8 @@ class BookCopyViewSet(CatalogViewSet):
 
 
 class LoanViewSet(viewsets.ReadOnlyModelViewSet):
+    """Возвращает выдачи с учётом роли пользователя."""
+
     queryset = Loan.objects.all()
     permission_classes = (IsAuthenticated,)
     pagination_class = CatalogPagination
@@ -160,6 +175,7 @@ class LoanViewSet(viewsets.ReadOnlyModelViewSet):
     ordering = ("-issued_at",)
 
     def get_queryset(self):
+        """Фильтрует выдачи по пользователю и состоянию."""
         queryset = Loan.objects.select_related(
             "reader",
             "book_copy",
@@ -188,6 +204,7 @@ class LoanViewSet(viewsets.ReadOnlyModelViewSet):
         return queryset
 
     def get_serializer_class(self):
+        """Выбирает представление выдачи по роли пользователя."""
         user_role = getattr(self.request.user, "role", None)
 
         if user_role in (ROLE_LIBRARIAN, ROLE_ADMIN):
@@ -197,6 +214,8 @@ class LoanViewSet(viewsets.ReadOnlyModelViewSet):
 
 
 class LoanIssueAPIView(APIView):
+    """Создаёт выдачу экземпляра книги."""
+
     permission_classes = (IsLibrarianOrAdmin,)
 
     @extend_schema(
@@ -205,6 +224,7 @@ class LoanIssueAPIView(APIView):
         responses={201: StaffLoanSerializer},
     )
     def post(self, request):
+        """Проверяет запрос и выдаёт книгу читателю."""
         serializer = LoanIssueSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
 
@@ -221,6 +241,8 @@ class LoanIssueAPIView(APIView):
 
 
 class LoanReturnAPIView(APIView):
+    """Возвращает выданный экземпляр в библиотеку."""
+
     permission_classes = (IsLibrarianOrAdmin,)
 
     @extend_schema(
@@ -229,6 +251,7 @@ class LoanReturnAPIView(APIView):
         responses={200: StaffLoanSerializer},
     )
     def post(self, request):
+        """Проверяет запрос и закрывает активную выдачу."""
         serializer = LoanReturnSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
 
@@ -250,12 +273,15 @@ class AvailabilitySubscriptionViewSet(
     mixins.DestroyModelMixin,
     viewsets.GenericViewSet,
 ):
+    """Управляет подписками читателя на доступность книг."""
+
     queryset = AvailabilitySubscription.objects.all()
     serializer_class = AvailabilitySubscriptionSerializer
     permission_classes = (IsReader,)
     pagination_class = CatalogPagination
 
     def get_queryset(self):
+        """Возвращает активные подписки текущего читателя."""
         return (
             AvailabilitySubscription.objects.filter(
                 reader=self.request.user,
@@ -266,4 +292,5 @@ class AvailabilitySubscriptionViewSet(
         )
 
     def perform_create(self, serializer):
+        """Сохраняет подписку для текущего читателя."""
         serializer.save(reader=self.request.user)

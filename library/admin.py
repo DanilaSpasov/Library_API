@@ -14,6 +14,8 @@ from library.tasks import send_availability_notifications
 
 @admin.register(Author)
 class AuthorAdmin(admin.ModelAdmin):
+    """Настройки отображения авторов в админ-панели."""
+
     list_display = (
         "full_name",
         "birth_date",
@@ -23,12 +25,16 @@ class AuthorAdmin(admin.ModelAdmin):
 
 @admin.register(Genre)
 class GenreAdmin(admin.ModelAdmin):
+    """Настройки отображения жанров в админ-панели."""
+
     list_display = ("name",)
     search_fields = ("name",)
 
 
 @admin.register(Book)
 class BookAdmin(admin.ModelAdmin):
+    """Настройки управления книгами в админ-панели."""
+
     list_display = (
         "title",
         "isbn",
@@ -50,11 +56,14 @@ class BookAdmin(admin.ModelAdmin):
     )
 
     def has_delete_permission(self, request, obj=None):
+        """Запрещает физическое удаление книг."""
         return False
 
 
 @admin.register(BookCopy)
 class BookCopyAdmin(admin.ModelAdmin):
+    """Настройки управления экземплярами книг в админ-панели."""
+
     list_display = (
         "inventory_number",
         "book",
@@ -70,9 +79,11 @@ class BookCopyAdmin(admin.ModelAdmin):
     list_select_related = ("book",)
 
     def has_delete_permission(self, request, obj=None):
+        """Запрещает физическое удаление экземпляров."""
         return False
 
     def save_model(self, request, obj, form, change):
+        """Сохраняет экземпляр и запускает уведомление о доступности."""
         previous_status = None
 
         if change:
@@ -90,6 +101,8 @@ class BookCopyAdmin(admin.ModelAdmin):
 
 @admin.register(Loan)
 class LoanAdmin(admin.ModelAdmin):
+    """Настройки просмотра выдач в админ-панели."""
+
     list_display = (
         "book_copy",
         "reader",
@@ -133,25 +146,32 @@ class LoanAdmin(admin.ModelAdmin):
     date_hierarchy = "issued_at"
 
     def has_add_permission(self, request):
+        """Запрещает создавать выдачи напрямую через админ-панель."""
         return False
 
     def has_change_permission(self, request, obj=None):
+        """Запрещает изменять выдачи напрямую через админ-панель."""
         return False
 
     def has_delete_permission(self, request, obj=None):
+        """Запрещает удалять выдачи через админ-панель."""
         return False
 
     @admin.display(boolean=True, description="Активна")
     def active_status(self, obj):
+        """Показывает, является ли выдача активной."""
         return obj.is_active
 
     @admin.display(boolean=True, description="Просрочена")
     def overdue_status(self, obj):
+        """Показывает, является ли выдача просроченной."""
         return obj.is_overdue
 
 
 @admin.register(AvailabilitySubscription)
 class AvailabilitySubscriptionAdmin(admin.ModelAdmin):
+    """Настройки просмотра подписок в админ-панели."""
+
     list_display = (
         "reader",
         "book",
