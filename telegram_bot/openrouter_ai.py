@@ -40,11 +40,14 @@ answer должно быть пустым.
 
 
 def ask_openrouter(text):
-    """Отправляет текст в OpenRouter и возвращает действие для бота."""
-    headers = {
-        "Authorization": f"Bearer {settings.OPENROUTER_API_KEY}",
-        "X-Title": "Library API Telegram Bot",
-    }
+    """Отправляет текст в AI и возвращает действие для бота."""
+    url = "https://openrouter.ai/api/v1/chat/completions"
+    headers = {"Authorization": f"Bearer {settings.OPENROUTER_API_KEY}"}
+
+    if settings.TELEGRAM_API_BASE_URL:
+        url = f"{settings.TELEGRAM_API_BASE_URL}/ai"
+        headers = {"X-Proxy-Secret": settings.TELEGRAM_PROXY_SECRET}
+
     data = {
         "model": settings.OPENROUTER_MODEL,
         "messages": [
@@ -55,7 +58,7 @@ def ask_openrouter(text):
         "response_format": {"type": "json_object"},
     }
     response = requests.post(
-        "https://openrouter.ai/api/v1/chat/completions",
+        url,
         headers=headers,
         json=data,
         timeout=30,
