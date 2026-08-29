@@ -4,8 +4,17 @@ from django.conf import settings
 
 def _request(method, data, timeout=10):
     """Отправляет запрос к Telegram API."""
-    url = f"https://api.telegram.org/bot{settings.TELEGRAM_BOT_TOKEN}/{method}"
-    response = requests.post(url, json=data, timeout=timeout)
+    if settings.TELEGRAM_API_BASE_URL:
+        url = f"{settings.TELEGRAM_API_BASE_URL}/{method}"
+        response = requests.post(
+            url,
+            json=data,
+            headers={"X-Proxy-Secret": settings.TELEGRAM_PROXY_SECRET},
+            timeout=timeout,
+        )
+    else:
+        url = f"https://api.telegram.org/bot{settings.TELEGRAM_BOT_TOKEN}/{method}"
+        response = requests.post(url, json=data, timeout=timeout)
     response.raise_for_status()
     result = response.json()
     if not result.get("ok"):
