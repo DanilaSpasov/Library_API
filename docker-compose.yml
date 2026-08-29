@@ -68,6 +68,20 @@ services:
       redis:
         condition: service_healthy
 
+  telegram_bot:
+    build: .
+    command: poetry run python manage.py run_telegram_bot
+    env_file:
+      - .env
+    environment:
+      DATABASE_HOST: db
+      CELERY_BROKER_URL: redis://redis:6379/0
+      CELERY_RESULT_BACKEND: redis://redis:6379/1
+    depends_on:
+      web:
+        condition: service_healthy
+    restart: unless-stopped
+
 volumes:
   postgres_data:
   redis_data:

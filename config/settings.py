@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "drf_spectacular",
     "library",
+    "telegram_bot",
     "users",
 ]
 
@@ -207,3 +208,12 @@ CELERY_ACCEPT_CONTENT = ("json",)
 CELERY_TASK_SERIALIZER = "json"
 CELERY_RESULT_SERIALIZER = "json"
 CELERY_TIMEZONE = TIME_ZONE
+
+
+# Telegram bot and OpenRouter
+
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "")
+TELEGRAM_POLL_TIMEOUT = int(os.getenv("TELEGRAM_POLL_TIMEOUT", "30"))
+
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "")
+OPENROUTER_MODEL = os.getenv("OPENROUTER_MODEL", "openrouter/free")

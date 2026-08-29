@@ -8,6 +8,11 @@ class EmailVerificationResponseSerializer(serializers.Serializer):
     detail = serializers.CharField()
 
 
+class TelegramConnectionCodeSerializer(serializers.Serializer):
+    code = serializers.CharField()
+    expires_at = serializers.DateTimeField()
+
+
 class UserRegistrationSerializer(serializers.ModelSerializer):
     password = serializers.CharField(
         write_only=True,
