@@ -17,6 +17,7 @@ logger = logging.getLogger(__name__)
     max_retries=3,
 )
 def send_availability_notifications(book_id):
+    """Отправляет читателям уведомления о доступности книги."""
     book = Book.objects.filter(id=book_id, is_active=True).first()
 
     if book is None:

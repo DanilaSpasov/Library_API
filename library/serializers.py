@@ -14,6 +14,8 @@ from users.models import ROLE_ADMIN
 
 
 class BookFilterSerializer(serializers.Serializer):
+    """Сериализатор параметров фильтрации книг."""
+
     author = serializers.IntegerField(
         min_value=1,
         required=False,
@@ -26,11 +28,15 @@ class BookFilterSerializer(serializers.Serializer):
 
 
 class LoanIssueSerializer(serializers.Serializer):
+    """Сериализатор данных для выдачи книги."""
+
     reader_email = serializers.EmailField()
     inventory_number = serializers.CharField(max_length=50)
 
 
 class LoanReturnSerializer(serializers.Serializer):
+    """Сериализатор данных для возврата книги."""
+
     inventory_number = serializers.CharField(max_length=50)
     status = serializers.ChoiceField(
         choices=(
@@ -42,6 +48,8 @@ class LoanReturnSerializer(serializers.Serializer):
 
 
 class LoanFilterSerializer(serializers.Serializer):
+    """Сериализатор фильтра состояния выдач."""
+
     status = serializers.ChoiceField(
         choices=("active", "returned", "overdue"),
         required=False,
@@ -49,6 +57,8 @@ class LoanFilterSerializer(serializers.Serializer):
 
 
 class ReaderLoanSerializer(serializers.ModelSerializer):
+    """Сериализатор выдачи для читателя."""
+
     book_title = serializers.CharField(
         source="book_copy.book.title",
         read_only=True,
@@ -57,6 +67,8 @@ class ReaderLoanSerializer(serializers.ModelSerializer):
     is_overdue = serializers.BooleanField(read_only=True)
 
     class Meta:
+        """Поля выдачи, доступные читателю."""
+
         model = Loan
         fields = (
             "id",
@@ -70,6 +82,8 @@ class ReaderLoanSerializer(serializers.ModelSerializer):
 
 
 class StaffLoanSerializer(serializers.ModelSerializer):
+    """Сериализатор выдачи для сотрудников библиотеки."""
+
     reader_email = serializers.EmailField(
         source="reader.email",
         read_only=True,
@@ -95,6 +109,8 @@ class StaffLoanSerializer(serializers.ModelSerializer):
     is_overdue = serializers.BooleanField(read_only=True)
 
     class Meta:
+        """Поля выдачи, доступные сотрудникам."""
+
         model = Loan
         fields = (
             "id",
@@ -112,6 +128,8 @@ class StaffLoanSerializer(serializers.ModelSerializer):
 
 
 class AvailabilitySubscriptionSerializer(serializers.ModelSerializer):
+    """Сериализатор подписки на доступность книги."""
+
     book_id = serializers.PrimaryKeyRelatedField(
         source="book",
         queryset=Book.objects.filter(is_active=True),
@@ -122,6 +140,8 @@ class AvailabilitySubscriptionSerializer(serializers.ModelSerializer):
     )
 
     class Meta:
+        """Поля подписки на доступность."""
+
         model = AvailabilitySubscription
         fields = (
             "id",
@@ -136,6 +156,7 @@ class AvailabilitySubscriptionSerializer(serializers.ModelSerializer):
         )
 
     def validate(self, data):
+        """Проверяет возможность подписаться на книгу."""
         book = data["book"]
         request = self.context["request"]
 
@@ -157,7 +178,11 @@ class AvailabilitySubscriptionSerializer(serializers.ModelSerializer):
 
 
 class AuthorSerializer(serializers.ModelSerializer):
+    """Сериализатор автора."""
+
     class Meta:
+        """Поля автора."""
+
         model = Author
         fields = (
             "id",
@@ -168,7 +193,11 @@ class AuthorSerializer(serializers.ModelSerializer):
 
 
 class GenreSerializer(serializers.ModelSerializer):
+    """Сериализатор жанра."""
+
     class Meta:
+        """Поля жанра."""
+
         model = Genre
         fields = (
             "id",
@@ -178,6 +207,8 @@ class GenreSerializer(serializers.ModelSerializer):
 
 
 class BookSerializer(serializers.ModelSerializer):
+    """Сериализатор книги и связанных данных."""
+
     authors = AuthorSerializer(
         many=True,
         read_only=True,
@@ -202,6 +233,8 @@ class BookSerializer(serializers.ModelSerializer):
     is_available = serializers.SerializerMethodField()
 
     class Meta:
+        """Поля книги."""
+
         model = Book
         fields = (
             "id",
@@ -219,15 +252,23 @@ class BookSerializer(serializers.ModelSerializer):
         )
 
     def get_available_copies_count(self, obj) -> int:
+        """Возвращает количество доступных экземпляров."""
         return obj.copies.filter(status=STATUS_AVAILABLE).count()
 
     def get_is_available(self, obj) -> bool:
+        """Показывает наличие доступного экземпляра."""
         return self.get_available_copies_count(obj) > 0
 
     def validate_is_active(self, value):
+        """Разрешает изменять активность книги только администратору."""
         request = self.context.get("request")
+        is_explicitly_set = "is_active" in self.initial_data
 
-        if request and request.user.role != ROLE_ADMIN:
+        if (
+            request
+            and request.user.role != ROLE_ADMIN
+            and (self.instance is not None or is_explicitly_set)
+        ):
             raise serializers.ValidationError(
                 "Изменять активность книги может только администратор."
             )
@@ -236,6 +277,8 @@ class BookSerializer(serializers.ModelSerializer):
 
 
 class BookCopySerializer(serializers.ModelSerializer):
+    """Сериализатор физического экземпляра книги."""
+
     book_title = serializers.CharField(
         source="book.title",
         read_only=True,
@@ -246,6 +289,8 @@ class BookCopySerializer(serializers.ModelSerializer):
     )
 
     class Meta:
+        """Поля экземпляра книги."""
+
         model = BookCopy
         fields = (
             "id",

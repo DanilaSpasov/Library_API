@@ -9,6 +9,7 @@ class IsReader(BasePermission):
     message = "Действие доступно только читателю."
 
     def has_permission(self, request, view):
+        """Проверяет, что пользователь является читателем."""
         return request.user.is_authenticated and request.user.role == ROLE_READER
 
 
@@ -18,6 +19,7 @@ class IsLibrarianOrAdmin(BasePermission):
     message = "Действие доступно только библиотекарю или администратору."
 
     def has_permission(self, request, view):
+        """Проверяет роль библиотекаря или администратора."""
         return request.user.is_authenticated and request.user.role in (
             ROLE_LIBRARIAN,
             ROLE_ADMIN,
@@ -30,6 +32,7 @@ class IsCatalogManager(BasePermission):
     message = "Изменять каталог может только библиотекарь или администратор."
 
     def has_permission(self, request, view):
+        """Проверяет право пользователя управлять каталогом."""
         return request.user.is_authenticated and request.user.role in (
             ROLE_LIBRARIAN,
             ROLE_ADMIN,
@@ -42,4 +45,5 @@ class IsAdminRole(BasePermission):
     message = "Это действие доступно только администратору."
 
     def has_permission(self, request, view):
+        """Проверяет, что пользователь является администратором."""
         return request.user.is_authenticated and request.user.role == ROLE_ADMIN

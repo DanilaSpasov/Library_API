@@ -3,6 +3,7 @@ from django.conf import settings
 
 
 def _request(method, data, timeout=10):
+    """Отправляет запрос к Telegram API."""
     url = f"https://api.telegram.org/bot{settings.TELEGRAM_BOT_TOKEN}/{method}"
     response = requests.post(url, json=data, timeout=timeout)
     response.raise_for_status()
@@ -13,6 +14,7 @@ def _request(method, data, timeout=10):
 
 
 def get_updates(offset=None):
+    """Получает новые сообщения и нажатия кнопок."""
     data = {
         "timeout": settings.TELEGRAM_POLL_TIMEOUT,
         "allowed_updates": ["message", "callback_query"],
@@ -23,6 +25,7 @@ def get_updates(offset=None):
 
 
 def send_message(chat_id, text, reply_markup=None):
+    """Отправляет сообщение в Telegram-чат."""
     data = {"chat_id": chat_id, "text": text}
     if reply_markup:
         data["reply_markup"] = reply_markup
@@ -30,6 +33,7 @@ def send_message(chat_id, text, reply_markup=None):
 
 
 def answer_callback(callback_id, text):
+    """Отправляет короткий ответ на нажатие inline-кнопки."""
     return _request(
         "answerCallbackQuery",
         {"callback_query_id": callback_id, "text": text},

@@ -10,9 +10,12 @@ from telegram_bot.telegram_api import get_updates
 
 
 class Command(BaseCommand):
+    """Запускает Telegram-бота в режиме long polling."""
+
     help = "Запускает Telegram-бота Library API в режиме long polling."
 
     def handle(self, *args, **options):
+        """Получает обновления Telegram и передаёт их обработчику."""
         required_settings = {
             "TELEGRAM_BOT_TOKEN": settings.TELEGRAM_BOT_TOKEN,
             "OPENROUTER_API_KEY": settings.OPENROUTER_API_KEY,

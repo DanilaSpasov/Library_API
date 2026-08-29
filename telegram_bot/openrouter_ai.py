@@ -40,6 +40,7 @@ answer должно быть пустым.
 
 
 def ask_openrouter(text):
+    """Отправляет текст в OpenRouter и возвращает действие для бота."""
     headers = {
         "Authorization": f"Bearer {settings.OPENROUTER_API_KEY}",
         "X-Title": "Library API Telegram Bot",

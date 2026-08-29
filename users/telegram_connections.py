@@ -10,14 +10,19 @@ from users.models import TelegramConnectionCode, User
 
 
 class InvalidConnectionCode(Exception):
+    """Ошибка неправильного или истёкшего кода подключения."""
+
     pass
 
 
 class TelegramChatAlreadyConnected(Exception):
+    """Ошибка повторной привязки Telegram-чата."""
+
     pass
 
 
 def _get_code_hash(code: str) -> str:
+    """Возвращает безопасный хеш одноразового кода."""
     return salted_hmac(
         "telegram_connection_code",
         code,
@@ -27,6 +32,7 @@ def _get_code_hash(code: str) -> str:
 
 
 def create_connection_code(user: User) -> tuple[str, datetime]:
+    """Создаёт одноразовый код подключения для пользователя."""
     code = secrets.token_hex(4)
     expires_at = timezone.now() + timedelta(minutes=10)
 
@@ -43,6 +49,7 @@ def create_connection_code(user: User) -> tuple[str, datetime]:
 
 @transaction.atomic
 def connect_telegram_account(chat_id: int, code: str) -> User:
+    """Привязывает Telegram-чат к пользователю по коду."""
     try:
         connection = (
             TelegramConnectionCode.objects.select_for_update()
@@ -71,4 +78,5 @@ def connect_telegram_account(chat_id: int, code: str) -> User:
 
 
 def get_user_by_telegram_chat_id(chat_id: int) -> User | None:
+    """Находит пользователя по идентификатору Telegram-чата."""
     return User.objects.filter(telegram_chat_id=chat_id).first()

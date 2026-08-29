@@ -20,6 +20,8 @@ BOOK_COPY_STATUS_CHOICES = (
 
 
 class Author(models.Model):
+    """Автор книги."""
+
     full_name = models.CharField(
         "Полное имя",
         max_length=255,
@@ -35,14 +37,19 @@ class Author(models.Model):
     )
 
     class Meta:
+        """Названия модели автора в админ-панели."""
+
         verbose_name = "Автор"
         verbose_name_plural = "Авторы"
 
     def __str__(self):
+        """Возвращает полное имя автора."""
         return self.full_name
 
 
 class Genre(models.Model):
+    """Жанр книги."""
+
     name = models.CharField(
         "Название",
         max_length=100,
@@ -54,14 +61,19 @@ class Genre(models.Model):
     )
 
     class Meta:
+        """Названия модели жанра в админ-панели."""
+
         verbose_name = "Жанр"
         verbose_name_plural = "Жанры"
 
     def __str__(self):
+        """Возвращает название жанра."""
         return self.name
 
 
 class Book(models.Model):
+    """Книга в библиотечном каталоге."""
+
     title = models.CharField(
         "Название",
         max_length=255,
@@ -98,14 +110,19 @@ class Book(models.Model):
     )
 
     class Meta:
+        """Названия модели книги в админ-панели."""
+
         verbose_name = "Книга"
         verbose_name_plural = "Книги"
 
     def __str__(self):
+        """Возвращает название книги."""
         return self.title
 
 
 class BookCopy(models.Model):
+    """Физический экземпляр книги."""
+
     book = models.ForeignKey(
         Book,
         verbose_name="Книга",
@@ -125,14 +142,19 @@ class BookCopy(models.Model):
     )
 
     class Meta:
+        """Названия модели экземпляра в админ-панели."""
+
         verbose_name = "Экземпляр книги"
         verbose_name_plural = "Экземпляры книг"
 
     def __str__(self):
+        """Возвращает инвентарный номер и название книги."""
         return f"{self.inventory_number} — {self.book.title}"
 
 
 class Loan(models.Model):
+    """Выдача экземпляра книги читателю."""
+
     reader = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         verbose_name="Читатель",
@@ -171,6 +193,8 @@ class Loan(models.Model):
     )
 
     class Meta:
+        """Названия и ограничения модели выдачи."""
+
         verbose_name = "Выдача"
         verbose_name_plural = "Выдачи"
         constraints = [
@@ -196,17 +220,22 @@ class Loan(models.Model):
 
     @property
     def is_active(self):
+        """Показывает, что книга ещё не возвращена."""
         return self.returned_at is None
 
     @property
     def is_overdue(self):
+        """Показывает, что активная выдача просрочена."""
         return self.is_active and self.due_at < timezone.now()
 
     def __str__(self):
+        """Возвращает экземпляр и email читателя."""
         return f"{self.book_copy.inventory_number} — " f"{self.reader.email}"
 
 
 class AvailabilitySubscription(models.Model):
+    """Подписка читателя на появление доступной книги."""
+
     reader = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         verbose_name="Читатель",
@@ -230,6 +259,8 @@ class AvailabilitySubscription(models.Model):
     )
 
     class Meta:
+        """Названия и ограничения модели подписки."""
+
         verbose_name = "Подписка на доступность"
         verbose_name_plural = "Подписки на доступность"
         constraints = [
@@ -241,4 +272,5 @@ class AvailabilitySubscription(models.Model):
         ]
 
     def __str__(self):
+        """Возвращает читателя и название книги."""
         return f"{self.reader.email} — {self.book.title}"

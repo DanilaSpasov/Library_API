@@ -33,10 +33,12 @@ MAIN_MENU = {
 
 
 def reply(chat_id, text, markup=None):
+    """Отправляет ответ с основным меню."""
     send_message(chat_id, text, markup or MAIN_MENU)
 
 
 def connected_user(chat_id):
+    """Возвращает привязанного пользователя или просит подключить аккаунт."""
     user = get_user_by_telegram_chat_id(chat_id=chat_id)
     if user is None:
         reply(chat_id, "Сначала привяжите аккаунт командой /connect КОД.")
@@ -44,6 +46,7 @@ def connected_user(chat_id):
 
 
 def get_books(query=""):
+    """Возвращает активные книги по поисковому запросу."""
     available_copy = BookCopy.objects.filter(
         book_id=OuterRef("pk"),
         status=STATUS_AVAILABLE,
@@ -59,6 +62,7 @@ def get_books(query=""):
 
 
 def show_books(chat_id, query=""):
+    """Отправляет найденные книги и кнопки действий."""
     books = list(get_books(query))
     if not books:
         reply(chat_id, "Книги не найдены.")
@@ -87,10 +91,12 @@ def show_books(chat_id, query=""):
 
 
 def start(chat_id, _text):
+    """Показывает приветствие и основное меню."""
     reply(chat_id, "Добро пожаловать в Library API! Выберите действие.")
 
 
 def connect(chat_id, text):
+    """Привязывает Telegram-чат по команде с одноразовым кодом."""
     parts = text.split(maxsplit=1)
     if len(parts) != 2:
         reply(chat_id, "Используйте команду /connect КОД.")
@@ -105,15 +111,18 @@ def connect(chat_id, text):
 
 
 def books(chat_id, _text):
+    """Показывает список книг."""
     show_books(chat_id)
 
 
 def search(chat_id, _text):
+    """Переводит чат в режим ожидания поискового запроса."""
     waiting_for_search.add(chat_id)
     reply(chat_id, "Напишите название книги, автора или ISBN.")
 
 
 def subscriptions(chat_id, _text):
+    """Показывает активные подписки пользователя."""
     user = connected_user(chat_id)
     if user is None:
         return
@@ -140,6 +149,7 @@ def subscriptions(chat_id, _text):
 
 
 def loans(chat_id, _text):
+    """Показывает активные выдачи пользователя."""
     user = connected_user(chat_id)
     if user is None:
         return
@@ -158,6 +168,7 @@ def loans(chat_id, _text):
 
 
 def connect_help(chat_id, _text):
+    """Объясняет способ привязки Telegram-аккаунта."""
     reply(
         chat_id,
         "Получите одноразовый код в Library API и отправьте /connect КОД.",
@@ -165,6 +176,7 @@ def connect_help(chat_id, _text):
 
 
 def help_message(chat_id, _text):
+    """Показывает краткую справку по боту."""
     reply(
         chat_id,
         "Используйте кнопки меню или задайте вопрос о книгах обычным текстом.",
@@ -183,6 +195,7 @@ MESSAGE_HANDLERS = {
 
 
 def handle_message(message):
+    """Выбирает действие для входящего сообщения."""
     chat_id = message.get("chat", {}).get("id")
     text = message.get("text", "").strip()
     if chat_id is None or not text:
@@ -202,6 +215,7 @@ def handle_message(message):
 
 
 def handle_free_text(chat_id, text):
+    """Обрабатывает обычный текст с помощью OpenRouter."""
     try:
         result = ask_openrouter(text)
     except (requests.RequestException, ValueError, KeyError, IndexError):
@@ -217,22 +231,27 @@ def handle_free_text(chat_id, text):
 
 
 def ai_search(chat_id, result):
+    """Выполняет поиск книги по ответу OpenRouter."""
     show_books(chat_id, result["search_query"])
 
 
 def ai_books(chat_id, _result):
+    """Показывает каталог по ответу OpenRouter."""
     show_books(chat_id)
 
 
 def ai_subscriptions(chat_id, _result):
+    """Показывает подписки по ответу OpenRouter."""
     subscriptions(chat_id, "")
 
 
 def ai_loans(chat_id, _result):
+    """Показывает выдачи по ответу OpenRouter."""
     loans(chat_id, "")
 
 
 def ai_answer(chat_id, result):
+    """Отправляет обычный текстовый ответ OpenRouter."""
     reply(chat_id, result["answer"] or "Попробуйте уточнить вопрос.")
 
 
@@ -246,6 +265,7 @@ AI_HANDLERS = {
 
 
 def book_detail(chat_id, book_id):
+    """Показывает подробную информацию о книге."""
     book = (
         Book.objects.prefetch_related("authors")
         .filter(
@@ -265,6 +285,7 @@ def book_detail(chat_id, book_id):
 
 
 def subscribe(chat_id, book_id):
+    """Подписывает пользователя на недоступную книгу."""
     user = connected_user(chat_id)
     if user is None:
         return "Сначала привяжите аккаунт"
@@ -283,6 +304,7 @@ def subscribe(chat_id, book_id):
 
 
 def unsubscribe(chat_id, book_id):
+    """Отменяет подписку пользователя на книгу."""
     user = connected_user(chat_id)
     if user is None:
         return "Сначала привяжите аккаунт"
@@ -302,6 +324,7 @@ CALLBACK_HANDLERS = {
 
 
 def handle_callback(callback):
+    """Обрабатывает нажатие inline-кнопки."""
     callback_id = callback.get("id")
     chat_id = callback.get("message", {}).get("chat", {}).get("id")
     parts = callback.get("data", "").split(":")
@@ -316,6 +339,7 @@ def handle_callback(callback):
 
 
 def handle_update(update):
+    """Определяет тип обновления Telegram."""
     if "callback_query" in update:
         handle_callback(update["callback_query"])
     elif "message" in update:
