@@ -11,15 +11,17 @@ from drf_spectacular.utils import extend_schema
 from rest_framework import status
 from rest_framework.exceptions import APIException
 from rest_framework.generics import CreateAPIView
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from users.models import User
 from users.serializers import (
     EmailVerificationResponseSerializer,
+    TelegramConnectionCodeSerializer,
     UserRegistrationSerializer,
 )
+from users.telegram_connections import create_connection_code
 
 logger = logging.getLogger(__name__)
 
@@ -108,3 +110,18 @@ class UserEmailVerificationView(APIView):
             {"detail": "Email подтверждён. Теперь вы можете войти."},
             status=status.HTTP_200_OK,
         )
+
+
+class TelegramConnectionCodeView(APIView):
+    permission_classes = (IsAuthenticated,)
+
+    @extend_schema(
+        summary="Получение кода подключения Telegram",
+        responses={201: TelegramConnectionCodeSerializer},
+    )
+    def post(self, request):
+        code, expires_at = create_connection_code(request.user)
+        serializer = TelegramConnectionCodeSerializer(
+            {"code": code, "expires_at": expires_at}
+        )
+        return Response(serializer.data, status=status.HTTP_201_CREATED)

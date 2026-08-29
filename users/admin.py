@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
-from users.models import User
+from users.models import TelegramConnectionCode, User
 
 
 @admin.register(User)
@@ -14,6 +14,7 @@ class UserAdmin(BaseUserAdmin):
         "role",
         "is_active",
         "is_email_verified",
+        "telegram_chat_id",
         "is_staff",
     )
     list_filter = (
@@ -27,6 +28,7 @@ class UserAdmin(BaseUserAdmin):
         "email",
         "first_name",
         "last_name",
+        "telegram_chat_id",
     )
     readonly_fields = (
         "last_login",
@@ -59,6 +61,7 @@ class UserAdmin(BaseUserAdmin):
                     "role",
                     "is_active",
                     "is_email_verified",
+                    "telegram_chat_id",
                     "is_staff",
                     "is_superuser",
                     "groups",
@@ -91,9 +94,17 @@ class UserAdmin(BaseUserAdmin):
                     "role",
                     "is_active",
                     "is_email_verified",
+                    "telegram_chat_id",
                     "is_staff",
                     "is_superuser",
                 ),
             },
         ),
     )
+
+
+@admin.register(TelegramConnectionCode)
+class TelegramConnectionCodeAdmin(admin.ModelAdmin):
+    list_display = ("user", "created_at", "expires_at")
+    search_fields = ("user__email",)
+    readonly_fields = ("user", "code_hash", "created_at", "expires_at")

@@ -70,6 +70,12 @@ class User(AbstractUser):
         "Email подтверждён",
         default=False,
     )
+    telegram_chat_id = models.BigIntegerField(
+        "Telegram chat ID",
+        null=True,
+        blank=True,
+        unique=True,
+    )
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
@@ -82,3 +88,26 @@ class User(AbstractUser):
 
     def __str__(self):
         return self.email
+
+
+class TelegramConnectionCode(models.Model):
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+        related_name="telegram_connection_code",
+        verbose_name="Пользователь",
+    )
+    code_hash = models.CharField(
+        "Хеш кода",
+        max_length=64,
+        unique=True,
+    )
+    expires_at = models.DateTimeField("Действует до")
+    created_at = models.DateTimeField("Создан", auto_now_add=True)
+
+    class Meta:
+        verbose_name = "Код подключения Telegram"
+        verbose_name_plural = "Коды подключения Telegram"
+
+    def __str__(self):
+        return f"Код подключения для {self.user}"
