@@ -1,0 +1,5452 @@
+[
+  {
+    "model": "library.author",
+    "pk": 1,
+    "fields": {
+      "full_name": "Сьюзен Коллинз",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 2,
+    "fields": {
+      "full_name": "Джоан Роулинг",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 3,
+    "fields": {
+      "full_name": "Стефани Майер",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 4,
+    "fields": {
+      "full_name": "Харпер Ли",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 5,
+    "fields": {
+      "full_name": "Фрэнсис Скотт Фицджеральд",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 6,
+    "fields": {
+      "full_name": "Джон Грин",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 7,
+    "fields": {
+      "full_name": "Джон Рональд Руэл Толкин",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 8,
+    "fields": {
+      "full_name": "Джером Сэлинджер",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 9,
+    "fields": {
+      "full_name": "Дэн Браун",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 10,
+    "fields": {
+      "full_name": "Джейн Остин",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 11,
+    "fields": {
+      "full_name": "Халед Хоссейни",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 12,
+    "fields": {
+      "full_name": "Вероника Рот",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 13,
+    "fields": {
+      "full_name": "Джордж Оруэлл",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 14,
+    "fields": {
+      "full_name": "Анна Франк",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 15,
+    "fields": {
+      "full_name": "Стиг Ларссон",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 16,
+    "fields": {
+      "full_name": "Элис Сиболд",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 17,
+    "fields": {
+      "full_name": "Уильям Голдинг",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 18,
+    "fields": {
+      "full_name": "Уильям Шекспир",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 19,
+    "fields": {
+      "full_name": "Гиллиан Флинн",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 20,
+    "fields": {
+      "full_name": "Кэтрин Стокетт",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 21,
+    "fields": {
+      "full_name": "Джон Стейнбек",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 22,
+    "fields": {
+      "full_name": "Артур Голден",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 23,
+    "fields": {
+      "full_name": "Эрика Леонард Джеймс",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 24,
+    "fields": {
+      "full_name": "Пауло Коэльо",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 25,
+    "fields": {
+      "full_name": "Лоис Лоури",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 26,
+    "fields": {
+      "full_name": "Клайв Стейплз Льюис",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 27,
+    "fields": {
+      "full_name": "Одри Ниффенеггер",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 28,
+    "fields": {
+      "full_name": "Джордж Мартин",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 29,
+    "fields": {
+      "full_name": "Элизабет Гилберт",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 30,
+    "fields": {
+      "full_name": "Рик Риордан",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 31,
+    "fields": {
+      "full_name": "Луиза Мэй Олкотт",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 32,
+    "fields": {
+      "full_name": "Шарлотта Бронте",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 33,
+    "fields": {
+      "full_name": "Николас Спаркс",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 34,
+    "fields": {
+      "full_name": "Янн Мартел",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 35,
+    "fields": {
+      "full_name": "Сара Груэн",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 36,
+    "fields": {
+      "full_name": "Маркус Зусак",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 37,
+    "fields": {
+      "full_name": "Рэй Брэдбери",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 38,
+    "fields": {
+      "full_name": "Шел Силверстайн",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 39,
+    "fields": {
+      "full_name": "Кассандра Клэр",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 40,
+    "fields": {
+      "full_name": "Кристофер Паолини",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 41,
+    "fields": {
+      "full_name": "Дуглас Адамс",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 42,
+    "fields": {
+      "full_name": "Олдос Хаксли",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 43,
+    "fields": {
+      "full_name": "Сью Монк Кидд",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 44,
+    "fields": {
+      "full_name": "Марк Твен",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 45,
+    "fields": {
+      "full_name": "Элвин Брукс Уайт",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 46,
+    "fields": {
+      "full_name": "Марк Хэддон",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 47,
+    "fields": {
+      "full_name": "Пола Хокинс",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 48,
+    "fields": {
+      "full_name": "Филип Пулман",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 49,
+    "fields": {
+      "full_name": "Эмили Бронте",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 50,
+    "fields": {
+      "full_name": "Джоди Пиколт",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 51,
+    "fields": {
+      "full_name": "Курт Воннегут",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 52,
+    "fields": {
+      "full_name": "Маргарет Митчелл",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 53,
+    "fields": {
+      "full_name": "Стивен Чбоски",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 54,
+    "fields": {
+      "full_name": "Орсон Скотт Кард",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 55,
+    "fields": {
+      "full_name": "Мэри Шелли",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 56,
+    "fields": {
+      "full_name": "Стивен Кинг",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 57,
+    "fields": {
+      "full_name": "Хелен Филдинг",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 58,
+    "fields": {
+      "full_name": "Луис Сашар",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 59,
+    "fields": {
+      "full_name": "Лорен Вайсбергер",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 60,
+    "fields": {
+      "full_name": "Гомер",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 61,
+    "fields": {
+      "full_name": "Антуан де Сент-Экзюпери",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 62,
+    "fields": {
+      "full_name": "Джаннетт Уоллс",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 63,
+    "fields": {
+      "full_name": "Джон Кракауэр",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 64,
+    "fields": {
+      "full_name": "Чарльз Диккенс",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 65,
+    "fields": {
+      "full_name": "Майкл Крайтон",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 66,
+    "fields": {
+      "full_name": "Джон Гришэм",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 67,
+    "fields": {
+      "full_name": "Эли Визель",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 68,
+    "fields": {
+      "full_name": "Уильям Голдман",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 69,
+    "fields": {
+      "full_name": "Сьюзен Хинтон",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 70,
+    "fields": {
+      "full_name": "Джеймс Дэшнер",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 71,
+    "fields": {
+      "full_name": "Стивен Левитт",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 72,
+    "fields": {
+      "full_name": "Стивен Дабнер",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 73,
+    "fields": {
+      "full_name": "Фрэнсис Ходжсон Бёрнетт",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 74,
+    "fields": {
+      "full_name": "Габриэль Гарсиа Маркес",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 75,
+    "fields": {
+      "full_name": "Оскар Уайльд",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 76,
+    "fields": {
+      "full_name": "Брэм Стокер",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.author",
+    "pk": 77,
+    "fields": {
+      "full_name": "Барбара Кингсолвер",
+      "birth_date": null,
+      "biography": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 1,
+    "fields": {
+      "name": "Антиутопия",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 2,
+    "fields": {
+      "name": "Фантастика",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 3,
+    "fields": {
+      "name": "Фэнтези",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 4,
+    "fields": {
+      "name": "Приключения",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 5,
+    "fields": {
+      "name": "Романтика",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 6,
+    "fields": {
+      "name": "Роман",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 7,
+    "fields": {
+      "name": "Драма",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 8,
+    "fields": {
+      "name": "Классика",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 9,
+    "fields": {
+      "name": "Взросление",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 10,
+    "fields": {
+      "name": "Триллер",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 11,
+    "fields": {
+      "name": "Детектив",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 12,
+    "fields": {
+      "name": "Сатира",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 13,
+    "fields": {
+      "name": "Дневник",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 14,
+    "fields": {
+      "name": "История",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 15,
+    "fields": {
+      "name": "Трагедия",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 16,
+    "fields": {
+      "name": "Повесть",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 17,
+    "fields": {
+      "name": "Эротика",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 18,
+    "fields": {
+      "name": "Притча",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 19,
+    "fields": {
+      "name": "Мемуары",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 20,
+    "fields": {
+      "name": "Путешествия",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 21,
+    "fields": {
+      "name": "Поэзия",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 22,
+    "fields": {
+      "name": "Детская литература",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 23,
+    "fields": {
+      "name": "Юмор",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 24,
+    "fields": {
+      "name": "Сказка",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 25,
+    "fields": {
+      "name": "Готика",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 26,
+    "fields": {
+      "name": "Ужасы",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 27,
+    "fields": {
+      "name": "Эпос",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 28,
+    "fields": {
+      "name": "Биография",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 29,
+    "fields": {
+      "name": "Судебный роман",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 30,
+    "fields": {
+      "name": "Экономика",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 31,
+    "fields": {
+      "name": "Научно-популярная литература",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 32,
+    "fields": {
+      "name": "Магический реализм",
+      "description": ""
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 1,
+    "fields": {
+      "title": "Голодные игры",
+      "isbn": "9780439023481",
+      "publication_year": 2008,
+      "description": "Китнисс Эвердин участвует в жестоких Играх, где подростки вынуждены бороться за жизнь перед всей страной.",
+      "authors": [
+        1
+      ],
+      "genres": [
+        1,
+        2
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 1,
+    "fields": {
+      "book": 1,
+      "inventory_number": "DEMO-001-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 2,
+    "fields": {
+      "book": 1,
+      "inventory_number": "DEMO-001-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 3,
+    "fields": {
+      "book": 1,
+      "inventory_number": "DEMO-001-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 2,
+    "fields": {
+      "title": "Гарри Поттер и философский камень",
+      "isbn": "9780439554930",
+      "publication_year": 1997,
+      "description": "Одиннадцатилетний Гарри узнаёт, что он волшебник, и поступает в школу Хогвартс, где сталкивается с тайной философского камня.",
+      "authors": [
+        2
+      ],
+      "genres": [
+        3,
+        4
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 4,
+    "fields": {
+      "book": 2,
+      "inventory_number": "DEMO-002-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 5,
+    "fields": {
+      "book": 2,
+      "inventory_number": "DEMO-002-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 6,
+    "fields": {
+      "book": 2,
+      "inventory_number": "DEMO-002-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 3,
+    "fields": {
+      "title": "Сумерки",
+      "isbn": "9780316015844",
+      "publication_year": 2005,
+      "description": "Белла Свон переезжает в Форкс и влюбляется в загадочного Эдварда Каллена, который оказывается вампиром.",
+      "authors": [
+        3
+      ],
+      "genres": [
+        3,
+        5
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 7,
+    "fields": {
+      "book": 3,
+      "inventory_number": "DEMO-003-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 8,
+    "fields": {
+      "book": 3,
+      "inventory_number": "DEMO-003-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 9,
+    "fields": {
+      "book": 3,
+      "inventory_number": "DEMO-003-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 4,
+    "fields": {
+      "title": "Убить пересмешника",
+      "isbn": "9780061120084",
+      "publication_year": 1960,
+      "description": "Девочка Джин-Луиза наблюдает, как её отец защищает в суде несправедливо обвинённого темнокожего мужчину.",
+      "authors": [
+        4
+      ],
+      "genres": [
+        6,
+        7
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 10,
+    "fields": {
+      "book": 4,
+      "inventory_number": "DEMO-004-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 11,
+    "fields": {
+      "book": 4,
+      "inventory_number": "DEMO-004-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 12,
+    "fields": {
+      "book": 4,
+      "inventory_number": "DEMO-004-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 5,
+    "fields": {
+      "title": "Великий Гэтсби",
+      "isbn": "9780743273565",
+      "publication_year": 1925,
+      "description": "Таинственный миллионер Джей Гэтсби устраивает роскошные приёмы, надеясь вернуть свою давнюю любовь Дейзи.",
+      "authors": [
+        5
+      ],
+      "genres": [
+        6,
+        8
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 13,
+    "fields": {
+      "book": 5,
+      "inventory_number": "DEMO-005-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 14,
+    "fields": {
+      "book": 5,
+      "inventory_number": "DEMO-005-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 15,
+    "fields": {
+      "book": 5,
+      "inventory_number": "DEMO-005-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 6,
+    "fields": {
+      "title": "Виноваты звёзды",
+      "isbn": "9780525478812",
+      "publication_year": 2012,
+      "description": "Подростки Хейзел и Огастус знакомятся в группе поддержки и влюбляются, несмотря на тяжёлую болезнь.",
+      "authors": [
+        6
+      ],
+      "genres": [
+        6,
+        7
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 16,
+    "fields": {
+      "book": 6,
+      "inventory_number": "DEMO-006-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 17,
+    "fields": {
+      "book": 6,
+      "inventory_number": "DEMO-006-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 18,
+    "fields": {
+      "book": 6,
+      "inventory_number": "DEMO-006-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 7,
+    "fields": {
+      "title": "Хоббит, или Туда и обратно",
+      "isbn": "9780618260300",
+      "publication_year": 1937,
+      "description": "Хоббит Бильбо Бэггинс отправляется с гномами к Одинокой горе, чтобы вернуть сокровища, захваченные драконом Смаугом.",
+      "authors": [
+        7
+      ],
+      "genres": [
+        3,
+        4
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 19,
+    "fields": {
+      "book": 7,
+      "inventory_number": "DEMO-007-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 20,
+    "fields": {
+      "book": 7,
+      "inventory_number": "DEMO-007-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 21,
+    "fields": {
+      "book": 7,
+      "inventory_number": "DEMO-007-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 8,
+    "fields": {
+      "title": "Над пропастью во ржи",
+      "isbn": "9780316769174",
+      "publication_year": 1951,
+      "description": "Холден Колфилд после исключения из школы несколько дней бродит по Нью-Йорку и пытается понять себя и окружающих.",
+      "authors": [
+        8
+      ],
+      "genres": [
+        6,
+        9
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 22,
+    "fields": {
+      "book": 8,
+      "inventory_number": "DEMO-008-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 23,
+    "fields": {
+      "book": 8,
+      "inventory_number": "DEMO-008-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 24,
+    "fields": {
+      "book": 8,
+      "inventory_number": "DEMO-008-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 9,
+    "fields": {
+      "title": "Ангелы и демоны",
+      "isbn": "9781416524793",
+      "publication_year": 2000,
+      "description": "Профессор Роберт Лэнгдон расследует заговор тайного общества, угрожающий Ватикану во время избрания папы.",
+      "authors": [
+        9
+      ],
+      "genres": [
+        10,
+        11
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 25,
+    "fields": {
+      "book": 9,
+      "inventory_number": "DEMO-009-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 26,
+    "fields": {
+      "book": 9,
+      "inventory_number": "DEMO-009-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 27,
+    "fields": {
+      "book": 9,
+      "inventory_number": "DEMO-009-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 10,
+    "fields": {
+      "title": "Гордость и предубеждение",
+      "isbn": "9780679783275",
+      "publication_year": 1813,
+      "description": "Элизабет Беннет и мистер Дарси преодолевают взаимные заблуждения, общественные условности и собственную гордость.",
+      "authors": [
+        10
+      ],
+      "genres": [
+        6,
+        8
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 28,
+    "fields": {
+      "book": 10,
+      "inventory_number": "DEMO-010-1",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 29,
+    "fields": {
+      "book": 10,
+      "inventory_number": "DEMO-010-2",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 30,
+    "fields": {
+      "book": 10,
+      "inventory_number": "DEMO-010-3",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 11,
+    "fields": {
+      "title": "Бегущий за ветром",
+      "isbn": "9781594480003",
+      "publication_year": 2003,
+      "description": "Амир возвращается к воспоминаниям о детстве в Кабуле и пытается искупить предательство своего друга Хасана.",
+      "authors": [
+        11
+      ],
+      "genres": [
+        6,
+        7
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 31,
+    "fields": {
+      "book": 11,
+      "inventory_number": "DEMO-011-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 32,
+    "fields": {
+      "book": 11,
+      "inventory_number": "DEMO-011-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 33,
+    "fields": {
+      "book": 11,
+      "inventory_number": "DEMO-011-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 12,
+    "fields": {
+      "title": "Дивергент",
+      "isbn": "9780062024046",
+      "publication_year": 2011,
+      "description": "В обществе, разделённом на фракции, Трис узнаёт, что не вписывается ни в одну категорию и потому опасна для системы.",
+      "authors": [
+        12
+      ],
+      "genres": [
+        1,
+        2
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 34,
+    "fields": {
+      "book": 12,
+      "inventory_number": "DEMO-012-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 35,
+    "fields": {
+      "book": 12,
+      "inventory_number": "DEMO-012-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 36,
+    "fields": {
+      "book": 12,
+      "inventory_number": "DEMO-012-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 13,
+    "fields": {
+      "title": "1984",
+      "isbn": "9780451524942",
+      "publication_year": 1949,
+      "description": "Уинстон Смит живёт под постоянным надзором тоталитарной партии и решается на тайный бунт против Большого Брата.",
+      "authors": [
+        13
+      ],
+      "genres": [
+        1,
+        2
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 37,
+    "fields": {
+      "book": 13,
+      "inventory_number": "DEMO-013-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 38,
+    "fields": {
+      "book": 13,
+      "inventory_number": "DEMO-013-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 39,
+    "fields": {
+      "book": 13,
+      "inventory_number": "DEMO-013-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 14,
+    "fields": {
+      "title": "Скотный двор",
+      "isbn": "9780452284241",
+      "publication_year": 1945,
+      "description": "Животные прогоняют хозяина фермы ради равенства, но новая власть постепенно превращается в такую же тиранию.",
+      "authors": [
+        13
+      ],
+      "genres": [
+        12,
+        1
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 40,
+    "fields": {
+      "book": 14,
+      "inventory_number": "DEMO-014-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 41,
+    "fields": {
+      "book": 14,
+      "inventory_number": "DEMO-014-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 42,
+    "fields": {
+      "book": 14,
+      "inventory_number": "DEMO-014-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 15,
+    "fields": {
+      "title": "Дневник Анны Франк",
+      "isbn": "9780553296983",
+      "publication_year": 1947,
+      "description": "Записи еврейской девочки рассказывают о жизни семьи в амстердамском убежище во время нацистской оккупации.",
+      "authors": [
+        14
+      ],
+      "genres": [
+        13,
+        14
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 43,
+    "fields": {
+      "book": 15,
+      "inventory_number": "DEMO-015-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 44,
+    "fields": {
+      "book": 15,
+      "inventory_number": "DEMO-015-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 45,
+    "fields": {
+      "book": 15,
+      "inventory_number": "DEMO-015-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 16,
+    "fields": {
+      "title": "Девушка с татуировкой дракона",
+      "isbn": "9780307269751",
+      "publication_year": 2005,
+      "description": "Журналист Микаэль Блумквист и хакер Лисбет Саландер расследуют исчезновение девушки из влиятельной семьи.",
+      "authors": [
+        15
+      ],
+      "genres": [
+        11,
+        10
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 46,
+    "fields": {
+      "book": 16,
+      "inventory_number": "DEMO-016-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 47,
+    "fields": {
+      "book": 16,
+      "inventory_number": "DEMO-016-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 48,
+    "fields": {
+      "book": 16,
+      "inventory_number": "DEMO-016-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 17,
+    "fields": {
+      "title": "И вспыхнет пламя",
+      "isbn": "9780439023504",
+      "publication_year": 2009,
+      "description": "Победа Китнисс и Пита становится символом сопротивления, а Капитолий вновь заставляет их выйти на арену.",
+      "authors": [
+        1
+      ],
+      "genres": [
+        1,
+        2
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 49,
+    "fields": {
+      "book": 17,
+      "inventory_number": "DEMO-017-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 50,
+    "fields": {
+      "book": 17,
+      "inventory_number": "DEMO-017-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 51,
+    "fields": {
+      "book": 17,
+      "inventory_number": "DEMO-017-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 18,
+    "fields": {
+      "title": "Гарри Поттер и узник Азкабана",
+      "isbn": "9780439655484",
+      "publication_year": 1999,
+      "description": "Гарри узнаёт о побеге Сириуса Блэка из Азкабана и раскрывает правду о прошлом своих родителей.",
+      "authors": [
+        2
+      ],
+      "genres": [
+        3,
+        4
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 52,
+    "fields": {
+      "book": 18,
+      "inventory_number": "DEMO-018-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 53,
+    "fields": {
+      "book": 18,
+      "inventory_number": "DEMO-018-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 54,
+    "fields": {
+      "book": 18,
+      "inventory_number": "DEMO-018-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 19,
+    "fields": {
+      "title": "Властелин колец: Братство Кольца",
+      "isbn": "9780618346264",
+      "publication_year": 1954,
+      "description": "Фродо покидает Шир и вместе с Братством отправляется уничтожить Кольцо Всевластия.",
+      "authors": [
+        7
+      ],
+      "genres": [
+        3,
+        4
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 55,
+    "fields": {
+      "book": 19,
+      "inventory_number": "DEMO-019-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 56,
+    "fields": {
+      "book": 19,
+      "inventory_number": "DEMO-019-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 57,
+    "fields": {
+      "book": 19,
+      "inventory_number": "DEMO-019-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 20,
+    "fields": {
+      "title": "Сойка-пересмешница",
+      "isbn": "9780439023511",
+      "publication_year": 2010,
+      "description": "Китнисс становится лицом восстания против Капитолия и сталкивается с ценой войны и пропаганды.",
+      "authors": [
+        1
+      ],
+      "genres": [
+        1,
+        2
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 58,
+    "fields": {
+      "book": 20,
+      "inventory_number": "DEMO-020-1",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 59,
+    "fields": {
+      "book": 20,
+      "inventory_number": "DEMO-020-2",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 60,
+    "fields": {
+      "book": 20,
+      "inventory_number": "DEMO-020-3",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 21,
+    "fields": {
+      "title": "Гарри Поттер и Орден Феникса",
+      "isbn": "9780439358071",
+      "publication_year": 2003,
+      "description": "Министерство отрицает возвращение Волан-де-Морта, поэтому Гарри организует тайные занятия по защите от тёмных искусств.",
+      "authors": [
+        2
+      ],
+      "genres": [
+        3,
+        4
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 61,
+    "fields": {
+      "book": 21,
+      "inventory_number": "DEMO-021-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 62,
+    "fields": {
+      "book": 21,
+      "inventory_number": "DEMO-021-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 63,
+    "fields": {
+      "book": 21,
+      "inventory_number": "DEMO-021-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 22,
+    "fields": {
+      "title": "Милые кости",
+      "isbn": "9780316166683",
+      "publication_year": 2002,
+      "description": "Убитая девочка Сьюзи наблюдает за своей семьёй и расследованием преступления из мира между жизнью и смертью.",
+      "authors": [
+        16
+      ],
+      "genres": [
+        6,
+        7
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 64,
+    "fields": {
+      "book": 22,
+      "inventory_number": "DEMO-022-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 65,
+    "fields": {
+      "book": 22,
+      "inventory_number": "DEMO-022-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 66,
+    "fields": {
+      "book": 22,
+      "inventory_number": "DEMO-022-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 23,
+    "fields": {
+      "title": "Гарри Поттер и Тайная комната",
+      "isbn": "9780439064873",
+      "publication_year": 1998,
+      "description": "В Хогвартсе происходят загадочные нападения, и Гарри пытается найти вход в легендарную Тайную комнату.",
+      "authors": [
+        2
+      ],
+      "genres": [
+        3,
+        4
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 67,
+    "fields": {
+      "book": 23,
+      "inventory_number": "DEMO-023-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 68,
+    "fields": {
+      "book": 23,
+      "inventory_number": "DEMO-023-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 69,
+    "fields": {
+      "book": 23,
+      "inventory_number": "DEMO-023-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 24,
+    "fields": {
+      "title": "Гарри Поттер и Кубок огня",
+      "isbn": "9780439139601",
+      "publication_year": 2000,
+      "description": "Кубок огня неожиданно выбирает Гарри участником опасного Турнира трёх волшебников.",
+      "authors": [
+        2
+      ],
+      "genres": [
+        3,
+        4
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 70,
+    "fields": {
+      "book": 24,
+      "inventory_number": "DEMO-024-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 71,
+    "fields": {
+      "book": 24,
+      "inventory_number": "DEMO-024-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 72,
+    "fields": {
+      "book": 24,
+      "inventory_number": "DEMO-024-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 25,
+    "fields": {
+      "title": "Гарри Поттер и Дары Смерти",
+      "isbn": "9780545010221",
+      "publication_year": 2007,
+      "description": "Гарри, Рон и Гермиона ищут крестражи Волан-де-Морта и готовятся к решающей битве за Хогвартс.",
+      "authors": [
+        2
+      ],
+      "genres": [
+        3,
+        4
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 73,
+    "fields": {
+      "book": 25,
+      "inventory_number": "DEMO-025-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 74,
+    "fields": {
+      "book": 25,
+      "inventory_number": "DEMO-025-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 75,
+    "fields": {
+      "book": 25,
+      "inventory_number": "DEMO-025-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 26,
+    "fields": {
+      "title": "Код да Винчи",
+      "isbn": "9780307277671",
+      "publication_year": 2003,
+      "description": "Роберт Лэнгдон и Софи Невё разгадывают цепочку символов после убийства хранителя Лувра.",
+      "authors": [
+        9
+      ],
+      "genres": [
+        10,
+        11
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 76,
+    "fields": {
+      "book": 26,
+      "inventory_number": "DEMO-026-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 77,
+    "fields": {
+      "book": 26,
+      "inventory_number": "DEMO-026-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 78,
+    "fields": {
+      "book": 26,
+      "inventory_number": "DEMO-026-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 27,
+    "fields": {
+      "title": "Гарри Поттер и Принц-полукровка",
+      "isbn": "9780439785976",
+      "publication_year": 2005,
+      "description": "Дамблдор знакомит Гарри с прошлым Волан-де-Морта, а таинственный учебник помогает ему на уроках зельеварения.",
+      "authors": [
+        2
+      ],
+      "genres": [
+        3,
+        4
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 79,
+    "fields": {
+      "book": 27,
+      "inventory_number": "DEMO-027-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 80,
+    "fields": {
+      "book": 27,
+      "inventory_number": "DEMO-027-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 81,
+    "fields": {
+      "book": 27,
+      "inventory_number": "DEMO-027-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 28,
+    "fields": {
+      "title": "Повелитель мух",
+      "isbn": "9780140283334",
+      "publication_year": 1954,
+      "description": "Группа школьников оказывается на необитаемом острове, где попытка самоорганизации быстро уступает страху и насилию.",
+      "authors": [
+        17
+      ],
+      "genres": [
+        6,
+        1
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 82,
+    "fields": {
+      "book": 28,
+      "inventory_number": "DEMO-028-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 83,
+    "fields": {
+      "book": 28,
+      "inventory_number": "DEMO-028-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 84,
+    "fields": {
+      "book": 28,
+      "inventory_number": "DEMO-028-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 29,
+    "fields": {
+      "title": "Ромео и Джульетта",
+      "isbn": "9780743477123",
+      "publication_year": 1595,
+      "description": "Юные Ромео и Джульетта из враждующих семей тайно влюбляются, но семейная вражда приводит их к гибели.",
+      "authors": [
+        18
+      ],
+      "genres": [
+        7,
+        15
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 85,
+    "fields": {
+      "book": 29,
+      "inventory_number": "DEMO-029-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 86,
+    "fields": {
+      "book": 29,
+      "inventory_number": "DEMO-029-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 87,
+    "fields": {
+      "book": 29,
+      "inventory_number": "DEMO-029-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 30,
+    "fields": {
+      "title": "Исчезнувшая",
+      "isbn": "9780297859383",
+      "publication_year": 2012,
+      "description": "После исчезновения Эми подозрение падает на её мужа Ника, а история их брака раскрывается с неожиданной стороны.",
+      "authors": [
+        19
+      ],
+      "genres": [
+        10,
+        11
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 88,
+    "fields": {
+      "book": 30,
+      "inventory_number": "DEMO-030-1",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 89,
+    "fields": {
+      "book": 30,
+      "inventory_number": "DEMO-030-2",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 90,
+    "fields": {
+      "book": 30,
+      "inventory_number": "DEMO-030-3",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 31,
+    "fields": {
+      "title": "Прислуга",
+      "isbn": "9780399155345",
+      "publication_year": 2009,
+      "description": "В Миссисипи 1960-х молодая журналистка записывает истории темнокожих служанок, рискуя нарушить общественные запреты.",
+      "authors": [
+        20
+      ],
+      "genres": [
+        6,
+        7
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 91,
+    "fields": {
+      "book": 31,
+      "inventory_number": "DEMO-031-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 92,
+    "fields": {
+      "book": 31,
+      "inventory_number": "DEMO-031-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 93,
+    "fields": {
+      "book": 31,
+      "inventory_number": "DEMO-031-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 32,
+    "fields": {
+      "title": "О мышах и людях",
+      "isbn": "9780142000670",
+      "publication_year": 1937,
+      "description": "Двое сезонных рабочих мечтают купить собственную ферму, но их надежду разрушает трагическая случайность.",
+      "authors": [
+        21
+      ],
+      "genres": [
+        16,
+        7
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 94,
+    "fields": {
+      "book": 32,
+      "inventory_number": "DEMO-032-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 95,
+    "fields": {
+      "book": 32,
+      "inventory_number": "DEMO-032-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 96,
+    "fields": {
+      "book": 32,
+      "inventory_number": "DEMO-032-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 33,
+    "fields": {
+      "title": "Мемуары гейши",
+      "isbn": "9780739326220",
+      "publication_year": 1997,
+      "description": "Девочка Тиё попадает в дом гейш в Киото и проходит долгий путь к известности под именем Саюри.",
+      "authors": [
+        22
+      ],
+      "genres": [
+        6,
+        14
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 97,
+    "fields": {
+      "book": 33,
+      "inventory_number": "DEMO-033-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 98,
+    "fields": {
+      "book": 33,
+      "inventory_number": "DEMO-033-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 99,
+    "fields": {
+      "book": 33,
+      "inventory_number": "DEMO-033-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 34,
+    "fields": {
+      "title": "Пятьдесят оттенков серого",
+      "isbn": "9781612130293",
+      "publication_year": 2011,
+      "description": "Студентка Анастейша Стил знакомится с предпринимателем Кристианом Греем и вступает с ним в сложные отношения.",
+      "authors": [
+        23
+      ],
+      "genres": [
+        6,
+        17
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 100,
+    "fields": {
+      "book": 34,
+      "inventory_number": "DEMO-034-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 101,
+    "fields": {
+      "book": 34,
+      "inventory_number": "DEMO-034-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 102,
+    "fields": {
+      "book": 34,
+      "inventory_number": "DEMO-034-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 35,
+    "fields": {
+      "title": "Алхимик",
+      "isbn": "9780061122422",
+      "publication_year": 1988,
+      "description": "Пастух Сантьяго отправляется к египетским пирамидам за сокровищем и учится следовать своей мечте.",
+      "authors": [
+        24
+      ],
+      "genres": [
+        6,
+        18
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 103,
+    "fields": {
+      "book": 35,
+      "inventory_number": "DEMO-035-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 104,
+    "fields": {
+      "book": 35,
+      "inventory_number": "DEMO-035-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 105,
+    "fields": {
+      "book": 35,
+      "inventory_number": "DEMO-035-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 36,
+    "fields": {
+      "title": "Дающий",
+      "isbn": "9780385732550",
+      "publication_year": 1993,
+      "description": "Джонас получает доступ к памяти человечества и узнаёт скрытую цену спокойствия своего идеального сообщества.",
+      "authors": [
+        25
+      ],
+      "genres": [
+        1,
+        2
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 106,
+    "fields": {
+      "book": 36,
+      "inventory_number": "DEMO-036-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 107,
+    "fields": {
+      "book": 36,
+      "inventory_number": "DEMO-036-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 108,
+    "fields": {
+      "book": 36,
+      "inventory_number": "DEMO-036-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 37,
+    "fields": {
+      "title": "Лев, колдунья и платяной шкаф",
+      "isbn": "9780060764890",
+      "publication_year": 1950,
+      "description": "Четверо детей через старый шкаф попадают в Нарнию и помогают льву Аслану победить Белую колдунью.",
+      "authors": [
+        26
+      ],
+      "genres": [
+        3,
+        4
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 109,
+    "fields": {
+      "book": 37,
+      "inventory_number": "DEMO-037-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 110,
+    "fields": {
+      "book": 37,
+      "inventory_number": "DEMO-037-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 111,
+    "fields": {
+      "book": 37,
+      "inventory_number": "DEMO-037-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 38,
+    "fields": {
+      "title": "Жена путешественника во времени",
+      "isbn": "9780965818674",
+      "publication_year": 2003,
+      "description": "Генри невольно перемещается во времени, а его жена Клэр пытается построить с ним общую жизнь.",
+      "authors": [
+        27
+      ],
+      "genres": [
+        6,
+        2
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 112,
+    "fields": {
+      "book": 38,
+      "inventory_number": "DEMO-038-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 113,
+    "fields": {
+      "book": 38,
+      "inventory_number": "DEMO-038-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 114,
+    "fields": {
+      "book": 38,
+      "inventory_number": "DEMO-038-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 39,
+    "fields": {
+      "title": "Игра престолов",
+      "isbn": "9780553588484",
+      "publication_year": 1996,
+      "description": "Знатные дома Вестероса вступают в борьбу за Железный трон, пока на севере пробуждается древняя угроза.",
+      "authors": [
+        28
+      ],
+      "genres": [
+        3,
+        4
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 115,
+    "fields": {
+      "book": 39,
+      "inventory_number": "DEMO-039-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 116,
+    "fields": {
+      "book": 39,
+      "inventory_number": "DEMO-039-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 117,
+    "fields": {
+      "book": 39,
+      "inventory_number": "DEMO-039-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 40,
+    "fields": {
+      "title": "Есть, молиться, любить",
+      "isbn": "9780143038412",
+      "publication_year": 2006,
+      "description": "После развода автор отправляется в Италию, Индию и Индонезию в поисках удовольствия, духовности и внутреннего равновесия.",
+      "authors": [
+        29
+      ],
+      "genres": [
+        19,
+        20
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 118,
+    "fields": {
+      "book": 40,
+      "inventory_number": "DEMO-040-1",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 119,
+    "fields": {
+      "book": 40,
+      "inventory_number": "DEMO-040-2",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 120,
+    "fields": {
+      "book": 40,
+      "inventory_number": "DEMO-040-3",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 41,
+    "fields": {
+      "title": "Перси Джексон и похититель молний",
+      "isbn": "9780786838653",
+      "publication_year": 2005,
+      "description": "Подросток Перси узнаёт, что он сын Посейдона, и отправляется искать украденную молнию Зевса.",
+      "authors": [
+        30
+      ],
+      "genres": [
+        3,
+        4
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 121,
+    "fields": {
+      "book": 41,
+      "inventory_number": "DEMO-041-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 122,
+    "fields": {
+      "book": 41,
+      "inventory_number": "DEMO-041-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 123,
+    "fields": {
+      "book": 41,
+      "inventory_number": "DEMO-041-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 42,
+    "fields": {
+      "title": "Маленькие женщины",
+      "isbn": "9780451529305",
+      "publication_year": 1868,
+      "description": "Четыре сестры Марч взрослеют во время Гражданской войны в США, переживая радости, утраты и первые чувства.",
+      "authors": [
+        31
+      ],
+      "genres": [
+        6,
+        9
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 124,
+    "fields": {
+      "book": 42,
+      "inventory_number": "DEMO-042-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 125,
+    "fields": {
+      "book": 42,
+      "inventory_number": "DEMO-042-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 126,
+    "fields": {
+      "book": 42,
+      "inventory_number": "DEMO-042-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 43,
+    "fields": {
+      "title": "Джейн Эйр",
+      "isbn": "9780142437216",
+      "publication_year": 1847,
+      "description": "Сирота Джейн становится гувернанткой в Торнфилде и влюбляется в его хозяина, скрывающего тяжёлую тайну.",
+      "authors": [
+        32
+      ],
+      "genres": [
+        6,
+        8
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 127,
+    "fields": {
+      "book": 43,
+      "inventory_number": "DEMO-043-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 128,
+    "fields": {
+      "book": 43,
+      "inventory_number": "DEMO-043-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 129,
+    "fields": {
+      "book": 43,
+      "inventory_number": "DEMO-043-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 44,
+    "fields": {
+      "title": "Дневник памяти",
+      "isbn": "9780553816723",
+      "publication_year": 1996,
+      "description": "История любви Ноя и Элли проходит через разлуку, социальные различия и испытание временем.",
+      "authors": [
+        33
+      ],
+      "genres": [
+        6,
+        7
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 130,
+    "fields": {
+      "book": 44,
+      "inventory_number": "DEMO-044-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 131,
+    "fields": {
+      "book": 44,
+      "inventory_number": "DEMO-044-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 132,
+    "fields": {
+      "book": 44,
+      "inventory_number": "DEMO-044-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 45,
+    "fields": {
+      "title": "Жизнь Пи",
+      "isbn": "9780770430085",
+      "publication_year": 2001,
+      "description": "Юный Пи после кораблекрушения оказывается в шлюпке посреди океана вместе с бенгальским тигром.",
+      "authors": [
+        34
+      ],
+      "genres": [
+        6,
+        4
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 133,
+    "fields": {
+      "book": 45,
+      "inventory_number": "DEMO-045-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 134,
+    "fields": {
+      "book": 45,
+      "inventory_number": "DEMO-045-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 135,
+    "fields": {
+      "book": 45,
+      "inventory_number": "DEMO-045-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 46,
+    "fields": {
+      "title": "Воды слонам!",
+      "isbn": "9781565125605",
+      "publication_year": 2006,
+      "description": "Во времена Великой депрессии молодой ветеринар присоединяется к бродячему цирку и влюбляется в жену дрессировщика.",
+      "authors": [
+        35
+      ],
+      "genres": [
+        6,
+        7
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 136,
+    "fields": {
+      "book": 46,
+      "inventory_number": "DEMO-046-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 137,
+    "fields": {
+      "book": 46,
+      "inventory_number": "DEMO-046-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 138,
+    "fields": {
+      "book": 46,
+      "inventory_number": "DEMO-046-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 47,
+    "fields": {
+      "title": "Книжный вор",
+      "isbn": "9780375831003",
+      "publication_year": 2005,
+      "description": "В нацистской Германии девочка Лизель крадёт книги и делится словами с близкими, пока её семья прячет еврея.",
+      "authors": [
+        36
+      ],
+      "genres": [
+        6,
+        14
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 139,
+    "fields": {
+      "book": 47,
+      "inventory_number": "DEMO-047-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 140,
+    "fields": {
+      "book": 47,
+      "inventory_number": "DEMO-047-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 141,
+    "fields": {
+      "book": 47,
+      "inventory_number": "DEMO-047-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 48,
+    "fields": {
+      "title": "451 градус по Фаренгейту",
+      "isbn": "9780307347985",
+      "publication_year": 1953,
+      "description": "Пожарный Гай Монтэг сжигает запрещённые книги, но встреча с необычной девушкой заставляет его усомниться в системе.",
+      "authors": [
+        37
+      ],
+      "genres": [
+        1,
+        2
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 142,
+    "fields": {
+      "book": 48,
+      "inventory_number": "DEMO-048-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 143,
+    "fields": {
+      "book": 48,
+      "inventory_number": "DEMO-048-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 144,
+    "fields": {
+      "book": 48,
+      "inventory_number": "DEMO-048-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 49,
+    "fields": {
+      "title": "Новолуние",
+      "isbn": "9780316160193",
+      "publication_year": 2006,
+      "description": "После отъезда Эдварда Белла тяжело переживает разлуку и сближается с Джейкобом, который тоже хранит сверхъестественную тайну.",
+      "authors": [
+        3
+      ],
+      "genres": [
+        3,
+        5
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 145,
+    "fields": {
+      "book": 49,
+      "inventory_number": "DEMO-049-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 146,
+    "fields": {
+      "book": 49,
+      "inventory_number": "DEMO-049-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 147,
+    "fields": {
+      "book": 49,
+      "inventory_number": "DEMO-049-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 50,
+    "fields": {
+      "title": "Там, где кончается тротуар",
+      "isbn": "9780060513030",
+      "publication_year": 1974,
+      "description": "Сборник коротких озорных стихотворений и рисунков о детском воображении, странных героях и игре слов.",
+      "authors": [
+        38
+      ],
+      "genres": [
+        21,
+        22
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 148,
+    "fields": {
+      "book": 50,
+      "inventory_number": "DEMO-050-1",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 149,
+    "fields": {
+      "book": 50,
+      "inventory_number": "DEMO-050-2",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 150,
+    "fields": {
+      "book": 50,
+      "inventory_number": "DEMO-050-3",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 51,
+    "fields": {
+      "title": "Город костей",
+      "isbn": "9781416914280",
+      "publication_year": 2007,
+      "description": "Клэри Фрэй обнаруживает мир Сумеречных охотников и пытается спасти похищенную мать.",
+      "authors": [
+        39
+      ],
+      "genres": [
+        3,
+        4
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 151,
+    "fields": {
+      "book": 51,
+      "inventory_number": "DEMO-051-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 152,
+    "fields": {
+      "book": 51,
+      "inventory_number": "DEMO-051-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 153,
+    "fields": {
+      "book": 51,
+      "inventory_number": "DEMO-051-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 52,
+    "fields": {
+      "title": "Затмение",
+      "isbn": "9780316160216",
+      "publication_year": 2007,
+      "description": "Белла выбирает между Эдвардом и Джейкобом, пока Сиэтлу угрожает армия новорождённых вампиров.",
+      "authors": [
+        3
+      ],
+      "genres": [
+        3,
+        5
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 154,
+    "fields": {
+      "book": 52,
+      "inventory_number": "DEMO-052-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 155,
+    "fields": {
+      "book": 52,
+      "inventory_number": "DEMO-052-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 156,
+    "fields": {
+      "book": 52,
+      "inventory_number": "DEMO-052-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 53,
+    "fields": {
+      "title": "Эрагон",
+      "isbn": "9780375826702",
+      "publication_year": 2002,
+      "description": "Юноша Эрагон находит яйцо дракона и становится Всадником, которому предстоит противостоять жестокому королю.",
+      "authors": [
+        40
+      ],
+      "genres": [
+        3,
+        4
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 157,
+    "fields": {
+      "book": 53,
+      "inventory_number": "DEMO-053-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 158,
+    "fields": {
+      "book": 53,
+      "inventory_number": "DEMO-053-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 159,
+    "fields": {
+      "book": 53,
+      "inventory_number": "DEMO-053-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 54,
+    "fields": {
+      "title": "Автостопом по галактике",
+      "isbn": "9780345391803",
+      "publication_year": 1979,
+      "description": "Артур Дент спасается перед уничтожением Земли и отправляется в абсурдное путешествие по Галактике.",
+      "authors": [
+        41
+      ],
+      "genres": [
+        2,
+        23
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 160,
+    "fields": {
+      "book": 54,
+      "inventory_number": "DEMO-054-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 161,
+    "fields": {
+      "book": 54,
+      "inventory_number": "DEMO-054-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 162,
+    "fields": {
+      "book": 54,
+      "inventory_number": "DEMO-054-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 55,
+    "fields": {
+      "title": "О дивный новый мир",
+      "isbn": "9780060929886",
+      "publication_year": 1932,
+      "description": "В будущем людей выращивают для заранее заданных ролей, а стабильность общества поддерживают развлечениями и наркотиком сомой.",
+      "authors": [
+        42
+      ],
+      "genres": [
+        1,
+        2
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 163,
+    "fields": {
+      "book": 55,
+      "inventory_number": "DEMO-055-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 164,
+    "fields": {
+      "book": 55,
+      "inventory_number": "DEMO-055-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 165,
+    "fields": {
+      "book": 55,
+      "inventory_number": "DEMO-055-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 56,
+    "fields": {
+      "title": "Рассвет",
+      "isbn": "9780316067935",
+      "publication_year": 2008,
+      "description": "Белла и Эдвард вступают в брак, но рождение их необычной дочери вызывает конфликт с Вольтури.",
+      "authors": [
+        3
+      ],
+      "genres": [
+        3,
+        5
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 166,
+    "fields": {
+      "book": 56,
+      "inventory_number": "DEMO-056-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 167,
+    "fields": {
+      "book": 56,
+      "inventory_number": "DEMO-056-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 168,
+    "fields": {
+      "book": 56,
+      "inventory_number": "DEMO-056-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 57,
+    "fields": {
+      "title": "Тайная жизнь пчёл",
+      "isbn": "9780142001745",
+      "publication_year": 2001,
+      "description": "Девочка Лили бежит из дома и находит приют у сестёр-пчеловодов, постепенно узнавая правду о своей матери.",
+      "authors": [
+        43
+      ],
+      "genres": [
+        6,
+        7
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 169,
+    "fields": {
+      "book": 57,
+      "inventory_number": "DEMO-057-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 170,
+    "fields": {
+      "book": 57,
+      "inventory_number": "DEMO-057-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 171,
+    "fields": {
+      "book": 57,
+      "inventory_number": "DEMO-057-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 58,
+    "fields": {
+      "title": "Приключения Гекльберри Финна",
+      "isbn": "9780142437186",
+      "publication_year": 1884,
+      "description": "Гекльберри Финн и беглый раб Джим плывут по Миссисипи, встречая мошенников и преодолевая предрассудки общества.",
+      "authors": [
+        44
+      ],
+      "genres": [
+        4,
+        8
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 172,
+    "fields": {
+      "book": 58,
+      "inventory_number": "DEMO-058-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 173,
+    "fields": {
+      "book": 58,
+      "inventory_number": "DEMO-058-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 174,
+    "fields": {
+      "book": 58,
+      "inventory_number": "DEMO-058-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 59,
+    "fields": {
+      "title": "Паутина Шарлотты",
+      "isbn": "9780064410946",
+      "publication_year": 1952,
+      "description": "Паучиха Шарлотта придумывает способ спасти поросёнка Уилбура от гибели и доказывает силу дружбы.",
+      "authors": [
+        45
+      ],
+      "genres": [
+        22,
+        24
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 175,
+    "fields": {
+      "book": 59,
+      "inventory_number": "DEMO-059-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 176,
+    "fields": {
+      "book": 59,
+      "inventory_number": "DEMO-059-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 177,
+    "fields": {
+      "book": 59,
+      "inventory_number": "DEMO-059-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 60,
+    "fields": {
+      "title": "Загадочное ночное убийство собаки",
+      "isbn": "9781400032723",
+      "publication_year": 2003,
+      "description": "Подросток Кристофер расследует гибель соседской собаки и открывает болезненную семейную тайну.",
+      "authors": [
+        46
+      ],
+      "genres": [
+        6,
+        11
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 178,
+    "fields": {
+      "book": 60,
+      "inventory_number": "DEMO-060-1",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 179,
+    "fields": {
+      "book": 60,
+      "inventory_number": "DEMO-060-2",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 180,
+    "fields": {
+      "book": 60,
+      "inventory_number": "DEMO-060-3",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 61,
+    "fields": {
+      "title": "Девушка в поезде",
+      "isbn": "9781594633676",
+      "publication_year": 2015,
+      "description": "Рэйчел ежедневно наблюдает из поезда за чужим домом, а после исчезновения его хозяйки оказывается втянута в расследование.",
+      "authors": [
+        47
+      ],
+      "genres": [
+        10,
+        11
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 181,
+    "fields": {
+      "book": 61,
+      "inventory_number": "DEMO-061-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 182,
+    "fields": {
+      "book": 61,
+      "inventory_number": "DEMO-061-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 183,
+    "fields": {
+      "book": 61,
+      "inventory_number": "DEMO-061-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 62,
+    "fields": {
+      "title": "Северное сияние",
+      "isbn": "9780679879244",
+      "publication_year": 1995,
+      "description": "Лира Белаква отправляется на север, чтобы спасти похищенных детей и узнать тайну загадочной Пыли.",
+      "authors": [
+        48
+      ],
+      "genres": [
+        3,
+        4
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 184,
+    "fields": {
+      "book": 62,
+      "inventory_number": "DEMO-062-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 185,
+    "fields": {
+      "book": 62,
+      "inventory_number": "DEMO-062-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 186,
+    "fields": {
+      "book": 62,
+      "inventory_number": "DEMO-062-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 63,
+    "fields": {
+      "title": "Грозовой перевал",
+      "isbn": "9780393978902",
+      "publication_year": 1847,
+      "description": "Разрушительная любовь Хитклифа и Кэтрин определяет судьбу двух семей на протяжении нескольких поколений.",
+      "authors": [
+        49
+      ],
+      "genres": [
+        6,
+        8
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 187,
+    "fields": {
+      "book": 63,
+      "inventory_number": "DEMO-063-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 188,
+    "fields": {
+      "book": 63,
+      "inventory_number": "DEMO-063-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 189,
+    "fields": {
+      "book": 63,
+      "inventory_number": "DEMO-063-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 64,
+    "fields": {
+      "title": "Ангел-хранитель",
+      "isbn": "9780743454544",
+      "publication_year": 2004,
+      "description": "Девочка, рождённая как донор для больной сестры, обращается в суд за правом самостоятельно решать судьбу своего тела.",
+      "authors": [
+        50
+      ],
+      "genres": [
+        6,
+        7
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 190,
+    "fields": {
+      "book": 64,
+      "inventory_number": "DEMO-064-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 191,
+    "fields": {
+      "book": 64,
+      "inventory_number": "DEMO-064-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 192,
+    "fields": {
+      "book": 64,
+      "inventory_number": "DEMO-064-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 65,
+    "fields": {
+      "title": "Бойня номер пять, или Крестовый поход детей",
+      "isbn": "9780385333856",
+      "publication_year": 1969,
+      "description": "Билли Пилигрим путешествует во времени и вновь переживает бомбардировку Дрездена, увиденную им во время войны.",
+      "authors": [
+        51
+      ],
+      "genres": [
+        2,
+        12
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 193,
+    "fields": {
+      "book": 65,
+      "inventory_number": "DEMO-065-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 194,
+    "fields": {
+      "book": 65,
+      "inventory_number": "DEMO-065-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 195,
+    "fields": {
+      "book": 65,
+      "inventory_number": "DEMO-065-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 66,
+    "fields": {
+      "title": "Унесённые ветром",
+      "isbn": "9780446675543",
+      "publication_year": 1936,
+      "description": "Скарлетт О’Хара пытается сохранить семью и поместье Тара во время Гражданской войны в США.",
+      "authors": [
+        52
+      ],
+      "genres": [
+        6,
+        14
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 196,
+    "fields": {
+      "book": 66,
+      "inventory_number": "DEMO-066-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 197,
+    "fields": {
+      "book": 66,
+      "inventory_number": "DEMO-066-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 198,
+    "fields": {
+      "book": 66,
+      "inventory_number": "DEMO-066-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 67,
+    "fields": {
+      "title": "Тысяча сияющих солнц",
+      "isbn": "9781594489501",
+      "publication_year": 2007,
+      "description": "Судьбы Мариам и Лейлы переплетаются в Кабуле на фоне войны, насилия и смены власти.",
+      "authors": [
+        11
+      ],
+      "genres": [
+        6,
+        7
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 199,
+    "fields": {
+      "book": 67,
+      "inventory_number": "DEMO-067-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 200,
+    "fields": {
+      "book": 67,
+      "inventory_number": "DEMO-067-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 201,
+    "fields": {
+      "book": 67,
+      "inventory_number": "DEMO-067-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 68,
+    "fields": {
+      "title": "Хорошо быть тихоней",
+      "isbn": "9780671027353",
+      "publication_year": 1999,
+      "description": "Замкнутый подросток Чарли в письмах рассказывает о дружбе, первой любви и попытке справиться с травмой.",
+      "authors": [
+        53
+      ],
+      "genres": [
+        6,
+        9
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 202,
+    "fields": {
+      "book": 68,
+      "inventory_number": "DEMO-068-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 203,
+    "fields": {
+      "book": 68,
+      "inventory_number": "DEMO-068-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 204,
+    "fields": {
+      "book": 68,
+      "inventory_number": "DEMO-068-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 69,
+    "fields": {
+      "title": "Инсургент",
+      "isbn": "9780007442911",
+      "publication_year": 2012,
+      "description": "Трис и Фор скрываются после краха фракции Бесстрашия и пытаются раскрыть секрет устройства своего общества.",
+      "authors": [
+        12
+      ],
+      "genres": [
+        1,
+        2
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 205,
+    "fields": {
+      "book": 69,
+      "inventory_number": "DEMO-069-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 206,
+    "fields": {
+      "book": 69,
+      "inventory_number": "DEMO-069-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 207,
+    "fields": {
+      "book": 69,
+      "inventory_number": "DEMO-069-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 70,
+    "fields": {
+      "title": "Игра Эндера",
+      "isbn": "9780812550702",
+      "publication_year": 1985,
+      "description": "Одарённого Эндера Виггина обучают в космической Боевой школе, готовя к войне с инопланетным противником.",
+      "authors": [
+        54
+      ],
+      "genres": [
+        2,
+        4
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 208,
+    "fields": {
+      "book": 70,
+      "inventory_number": "DEMO-070-1",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 209,
+    "fields": {
+      "book": 70,
+      "inventory_number": "DEMO-070-2",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 210,
+    "fields": {
+      "book": 70,
+      "inventory_number": "DEMO-070-3",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 71,
+    "fields": {
+      "title": "Франкенштейн, или Современный Прометей",
+      "isbn": "9780141439471",
+      "publication_year": 1818,
+      "description": "Учёный Виктор Франкенштейн создаёт живое существо, но отвергает его и сталкивается с последствиями своего поступка.",
+      "authors": [
+        55
+      ],
+      "genres": [
+        25,
+        2
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 211,
+    "fields": {
+      "book": 71,
+      "inventory_number": "DEMO-071-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 212,
+    "fields": {
+      "book": 71,
+      "inventory_number": "DEMO-071-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 213,
+    "fields": {
+      "book": 71,
+      "inventory_number": "DEMO-071-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 72,
+    "fields": {
+      "title": "Сияние",
+      "isbn": "9780450040184",
+      "publication_year": 1977,
+      "description": "Джек Торранс с семьёй остаётся зимним смотрителем пустого отеля, где сверхъестественные силы подчиняют его разум.",
+      "authors": [
+        56
+      ],
+      "genres": [
+        26,
+        10
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 214,
+    "fields": {
+      "book": 72,
+      "inventory_number": "DEMO-072-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 215,
+    "fields": {
+      "book": 72,
+      "inventory_number": "DEMO-072-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 216,
+    "fields": {
+      "book": 72,
+      "inventory_number": "DEMO-072-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 73,
+    "fields": {
+      "title": "Гостья",
+      "isbn": "9780316068055",
+      "publication_year": 2008,
+      "description": "Инопланетная душа Странница получает тело Мелани, но сохраняющиеся воспоминания девушки меняют её отношение к людям.",
+      "authors": [
+        3
+      ],
+      "genres": [
+        2,
+        5
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 217,
+    "fields": {
+      "book": 73,
+      "inventory_number": "DEMO-073-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 218,
+    "fields": {
+      "book": 73,
+      "inventory_number": "DEMO-073-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 219,
+    "fields": {
+      "book": 73,
+      "inventory_number": "DEMO-073-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 74,
+    "fields": {
+      "title": "В поисках Аляски",
+      "isbn": "9780142402511",
+      "publication_year": 2005,
+      "description": "Майлз поступает в школу-интернат, знакомится с непредсказуемой Аляской и переживает событие, изменившее его друзей.",
+      "authors": [
+        6
+      ],
+      "genres": [
+        6,
+        9
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 220,
+    "fields": {
+      "book": 74,
+      "inventory_number": "DEMO-074-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 221,
+    "fields": {
+      "book": 74,
+      "inventory_number": "DEMO-074-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 222,
+    "fields": {
+      "book": 74,
+      "inventory_number": "DEMO-074-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 75,
+    "fields": {
+      "title": "Дневник Бриджит Джонс",
+      "isbn": "9780140280104",
+      "publication_year": 1996,
+      "description": "Одинокая лондонка Бриджит ведёт дневник, пытаясь изменить свою жизнь и разобраться в отношениях с двумя мужчинами.",
+      "authors": [
+        57
+      ],
+      "genres": [
+        6,
+        23
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 223,
+    "fields": {
+      "book": 75,
+      "inventory_number": "DEMO-075-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 224,
+    "fields": {
+      "book": 75,
+      "inventory_number": "DEMO-075-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 225,
+    "fields": {
+      "book": 75,
+      "inventory_number": "DEMO-075-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 76,
+    "fields": {
+      "title": "Разум и чувства",
+      "isbn": "9780141439662",
+      "publication_year": 1811,
+      "description": "Сёстры Элинор и Марианна по-разному переживают любовь, разочарование и ограничения английского общества.",
+      "authors": [
+        10
+      ],
+      "genres": [
+        6,
+        8
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 226,
+    "fields": {
+      "book": 76,
+      "inventory_number": "DEMO-076-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 227,
+    "fields": {
+      "book": 76,
+      "inventory_number": "DEMO-076-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 228,
+    "fields": {
+      "book": 76,
+      "inventory_number": "DEMO-076-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 77,
+    "fields": {
+      "title": "Ямы",
+      "isbn": "9780439244190",
+      "publication_year": 1998,
+      "description": "Стэнли попадает в исправительный лагерь, где мальчиков заставляют копать ямы, и раскрывает скрытую цель надзирателей.",
+      "authors": [
+        58
+      ],
+      "genres": [
+        4,
+        22
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 229,
+    "fields": {
+      "book": 77,
+      "inventory_number": "DEMO-077-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 230,
+    "fields": {
+      "book": 77,
+      "inventory_number": "DEMO-077-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 231,
+    "fields": {
+      "book": 77,
+      "inventory_number": "DEMO-077-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 78,
+    "fields": {
+      "title": "Дьявол носит Прада",
+      "isbn": "9780307275554",
+      "publication_year": 2003,
+      "description": "Начинающая журналистка Андреа становится помощницей властного редактора модного журнала и платит высокую цену за карьеру.",
+      "authors": [
+        59
+      ],
+      "genres": [
+        6,
+        12
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 232,
+    "fields": {
+      "book": 78,
+      "inventory_number": "DEMO-078-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 233,
+    "fields": {
+      "book": 78,
+      "inventory_number": "DEMO-078-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 234,
+    "fields": {
+      "book": 78,
+      "inventory_number": "DEMO-078-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 79,
+    "fields": {
+      "title": "Одиссея",
+      "isbn": "9780143039952",
+      "publication_year": null,
+      "description": "После Троянской войны Одиссей десять лет возвращается на Итаку, преодолевая гнев богов и встречи с чудовищами.",
+      "authors": [
+        60
+      ],
+      "genres": [
+        27,
+        4
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 235,
+    "fields": {
+      "book": 79,
+      "inventory_number": "DEMO-079-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 236,
+    "fields": {
+      "book": 79,
+      "inventory_number": "DEMO-079-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 237,
+    "fields": {
+      "book": 79,
+      "inventory_number": "DEMO-079-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 80,
+    "fields": {
+      "title": "Маленький принц",
+      "isbn": "9780156012201",
+      "publication_year": 1946,
+      "description": "Маленький принц путешествует по планетам и рассказывает лётчику о дружбе, любви и ответственности за близких.",
+      "authors": [
+        61
+      ],
+      "genres": [
+        24,
+        18
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 238,
+    "fields": {
+      "book": 80,
+      "inventory_number": "DEMO-080-1",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 239,
+    "fields": {
+      "book": 80,
+      "inventory_number": "DEMO-080-2",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 240,
+    "fields": {
+      "book": 80,
+      "inventory_number": "DEMO-080-3",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 81,
+    "fields": {
+      "title": "Замок из стекла",
+      "isbn": "9780743247542",
+      "publication_year": 2005,
+      "description": "Автор вспоминает детство в бедной и беспокойной семье, где мечты родителей соседствовали с безответственностью.",
+      "authors": [
+        62
+      ],
+      "genres": [
+        19,
+        7
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 241,
+    "fields": {
+      "book": 81,
+      "inventory_number": "DEMO-081-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 242,
+    "fields": {
+      "book": 81,
+      "inventory_number": "DEMO-081-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 243,
+    "fields": {
+      "book": 81,
+      "inventory_number": "DEMO-081-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 82,
+    "fields": {
+      "title": "В диких условиях",
+      "isbn": "9780385486804",
+      "publication_year": 1996,
+      "description": "Кристофер Маккэндлесс отказывается от привычной жизни и отправляется один на Аляску, где его путешествие заканчивается трагически.",
+      "authors": [
+        63
+      ],
+      "genres": [
+        28,
+        20
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 244,
+    "fields": {
+      "book": 82,
+      "inventory_number": "DEMO-082-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 245,
+    "fields": {
+      "book": 82,
+      "inventory_number": "DEMO-082-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 246,
+    "fields": {
+      "book": 82,
+      "inventory_number": "DEMO-082-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 83,
+    "fields": {
+      "title": "Повесть о двух городах",
+      "isbn": "9780141439600",
+      "publication_year": 1859,
+      "description": "Судьбы нескольких семей переплетаются между Лондоном и Парижем накануне и во время Французской революции.",
+      "authors": [
+        64
+      ],
+      "genres": [
+        6,
+        14
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 247,
+    "fields": {
+      "book": 83,
+      "inventory_number": "DEMO-083-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 248,
+    "fields": {
+      "book": 83,
+      "inventory_number": "DEMO-083-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 249,
+    "fields": {
+      "book": 83,
+      "inventory_number": "DEMO-083-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 84,
+    "fields": {
+      "title": "Парк юрского периода",
+      "isbn": "9780307348142",
+      "publication_year": 1990,
+      "description": "Учёные возвращают динозавров с помощью генной инженерии, но система безопасности островного парка выходит из-под контроля.",
+      "authors": [
+        65
+      ],
+      "genres": [
+        2,
+        10
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 250,
+    "fields": {
+      "book": 84,
+      "inventory_number": "DEMO-084-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 251,
+    "fields": {
+      "book": 84,
+      "inventory_number": "DEMO-084-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 252,
+    "fields": {
+      "book": 84,
+      "inventory_number": "DEMO-084-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 85,
+    "fields": {
+      "title": "Щедрое дерево",
+      "isbn": "9780060256654",
+      "publication_year": 1964,
+      "description": "Дерево на протяжении всей жизни бескорыстно отдаёт мальчику всё, что может ему предложить.",
+      "authors": [
+        38
+      ],
+      "genres": [
+        22,
+        18
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 253,
+    "fields": {
+      "book": 85,
+      "inventory_number": "DEMO-085-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 254,
+    "fields": {
+      "book": 85,
+      "inventory_number": "DEMO-085-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 255,
+    "fields": {
+      "book": 85,
+      "inventory_number": "DEMO-085-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 86,
+    "fields": {
+      "title": "Время убивать",
+      "isbn": "9780385338615",
+      "publication_year": 1989,
+      "description": "Молодой адвокат защищает темнокожего отца, убившего нападавших на его дочь, в городе, охваченном расовым конфликтом.",
+      "authors": [
+        66
+      ],
+      "genres": [
+        10,
+        29
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 256,
+    "fields": {
+      "book": 86,
+      "inventory_number": "DEMO-086-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 257,
+    "fields": {
+      "book": 86,
+      "inventory_number": "DEMO-086-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 258,
+    "fields": {
+      "book": 86,
+      "inventory_number": "DEMO-086-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 87,
+    "fields": {
+      "title": "Ночь",
+      "isbn": "9780374500023",
+      "publication_year": 1958,
+      "description": "Автор свидетельствует о пережитом подростком в нацистских концлагерях Освенцим и Бухенвальд.",
+      "authors": [
+        67
+      ],
+      "genres": [
+        19,
+        14
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 259,
+    "fields": {
+      "book": 87,
+      "inventory_number": "DEMO-087-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 260,
+    "fields": {
+      "book": 87,
+      "inventory_number": "DEMO-087-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 261,
+    "fields": {
+      "book": 87,
+      "inventory_number": "DEMO-087-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 88,
+    "fields": {
+      "title": "Бумажные города",
+      "isbn": "9780142414934",
+      "publication_year": 2008,
+      "description": "Кью следует по подсказкам исчезнувшей Марго и постепенно понимает, насколько мало знал о ней на самом деле.",
+      "authors": [
+        6
+      ],
+      "genres": [
+        6,
+        9
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 262,
+    "fields": {
+      "book": 88,
+      "inventory_number": "DEMO-088-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 263,
+    "fields": {
+      "book": 88,
+      "inventory_number": "DEMO-088-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 264,
+    "fields": {
+      "book": 88,
+      "inventory_number": "DEMO-088-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 89,
+    "fields": {
+      "title": "Принцесса-невеста",
+      "isbn": "9780345418265",
+      "publication_year": 1973,
+      "description": "Влюблённый Уэстли возвращается к Баттеркап и проходит через дуэли, похищение и интриги вымышленного королевства.",
+      "authors": [
+        68
+      ],
+      "genres": [
+        3,
+        4
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 265,
+    "fields": {
+      "book": 89,
+      "inventory_number": "DEMO-089-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 266,
+    "fields": {
+      "book": 89,
+      "inventory_number": "DEMO-089-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 267,
+    "fields": {
+      "book": 89,
+      "inventory_number": "DEMO-089-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 90,
+    "fields": {
+      "title": "Изгои",
+      "isbn": "9780140385724",
+      "publication_year": 1967,
+      "description": "Подросток Понибой живёт в мире враждующих уличных группировок и сталкивается с насилием, дружбой и утратой.",
+      "authors": [
+        69
+      ],
+      "genres": [
+        6,
+        9
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 268,
+    "fields": {
+      "book": 90,
+      "inventory_number": "DEMO-090-1",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 269,
+    "fields": {
+      "book": 90,
+      "inventory_number": "DEMO-090-2",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 270,
+    "fields": {
+      "book": 90,
+      "inventory_number": "DEMO-090-3",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 91,
+    "fields": {
+      "title": "Бегущий в лабиринте",
+      "isbn": "9780385737944",
+      "publication_year": 2009,
+      "description": "Томас просыпается без памяти среди подростков, которые каждый день ищут выход из смертельно опасного лабиринта.",
+      "authors": [
+        70
+      ],
+      "genres": [
+        1,
+        2
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 271,
+    "fields": {
+      "book": 91,
+      "inventory_number": "DEMO-091-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 272,
+    "fields": {
+      "book": 91,
+      "inventory_number": "DEMO-091-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 273,
+    "fields": {
+      "book": 91,
+      "inventory_number": "DEMO-091-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 92,
+    "fields": {
+      "title": "Фрикономика",
+      "isbn": "9780061234002",
+      "publication_year": 2005,
+      "description": "Авторы с помощью экономических данных исследуют скрытые причины повседневных решений и неожиданные связи между явлениями.",
+      "authors": [
+        71,
+        72
+      ],
+      "genres": [
+        30,
+        31
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 274,
+    "fields": {
+      "book": 92,
+      "inventory_number": "DEMO-092-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 275,
+    "fields": {
+      "book": 92,
+      "inventory_number": "DEMO-092-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 276,
+    "fields": {
+      "book": 92,
+      "inventory_number": "DEMO-092-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 93,
+    "fields": {
+      "title": "Таинственный сад",
+      "isbn": "9780517189603",
+      "publication_year": 1911,
+      "description": "Осиротевшая Мэри находит заброшенный сад, дружба и забота о котором меняют жизнь детей в старом поместье.",
+      "authors": [
+        73
+      ],
+      "genres": [
+        22,
+        8
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 277,
+    "fields": {
+      "book": 93,
+      "inventory_number": "DEMO-093-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 278,
+    "fields": {
+      "book": 93,
+      "inventory_number": "DEMO-093-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 279,
+    "fields": {
+      "book": 93,
+      "inventory_number": "DEMO-093-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 94,
+    "fields": {
+      "title": "Сто лет одиночества",
+      "isbn": "9780060531041",
+      "publication_year": 1967,
+      "description": "История семи поколений семьи Буэндиа разворачивается в вымышленном городе Макондо, где чудесное соседствует с обыденным.",
+      "authors": [
+        74
+      ],
+      "genres": [
+        6,
+        32
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 280,
+    "fields": {
+      "book": 94,
+      "inventory_number": "DEMO-094-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 281,
+    "fields": {
+      "book": 94,
+      "inventory_number": "DEMO-094-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 282,
+    "fields": {
+      "book": 94,
+      "inventory_number": "DEMO-094-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 95,
+    "fields": {
+      "title": "Портрет Дориана Грея",
+      "isbn": "9780375751523",
+      "publication_year": 1891,
+      "description": "Дориан сохраняет молодость, пока его портрет принимает на себя следы возраста и последствий порочной жизни.",
+      "authors": [
+        75
+      ],
+      "genres": [
+        6,
+        25
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 283,
+    "fields": {
+      "book": 95,
+      "inventory_number": "DEMO-095-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 284,
+    "fields": {
+      "book": 95,
+      "inventory_number": "DEMO-095-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 285,
+    "fields": {
+      "book": 95,
+      "inventory_number": "DEMO-095-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 96,
+    "fields": {
+      "title": "Пятьдесят оттенков свободы",
+      "isbn": "9780345803504",
+      "publication_year": 2012,
+      "description": "Анастейша и Кристиан начинают семейную жизнь, но прошлые угрозы и взаимные страхи испытывают их отношения.",
+      "authors": [
+        23
+      ],
+      "genres": [
+        6,
+        17
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 286,
+    "fields": {
+      "book": 96,
+      "inventory_number": "DEMO-096-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 287,
+    "fields": {
+      "book": 96,
+      "inventory_number": "DEMO-096-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 288,
+    "fields": {
+      "book": 96,
+      "inventory_number": "DEMO-096-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 97,
+    "fields": {
+      "title": "Дракула",
+      "isbn": "9780393970135",
+      "publication_year": 1897,
+      "description": "Граф Дракула покидает Трансильванию и угрожает жителям Англии, а группа друзей пытается остановить вампира.",
+      "authors": [
+        76
+      ],
+      "genres": [
+        25,
+        26
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 289,
+    "fields": {
+      "book": 97,
+      "inventory_number": "DEMO-097-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 290,
+    "fields": {
+      "book": 97,
+      "inventory_number": "DEMO-097-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 291,
+    "fields": {
+      "book": 97,
+      "inventory_number": "DEMO-097-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 98,
+    "fields": {
+      "title": "Девушка, которая играла с огнём",
+      "isbn": "9780307269980",
+      "publication_year": 2006,
+      "description": "Лисбет Саландер обвиняют в нескольких убийствах, и Микаэль Блумквист пытается доказать её невиновность.",
+      "authors": [
+        15
+      ],
+      "genres": [
+        11,
+        10
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 292,
+    "fields": {
+      "book": 98,
+      "inventory_number": "DEMO-098-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 293,
+    "fields": {
+      "book": 98,
+      "inventory_number": "DEMO-098-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 294,
+    "fields": {
+      "book": 98,
+      "inventory_number": "DEMO-098-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 99,
+    "fields": {
+      "title": "На пятьдесят оттенков темнее",
+      "isbn": "9781612130583",
+      "publication_year": 2011,
+      "description": "Анастейша возобновляет отношения с Кристианом и узнаёт больше о его прошлом и прежних партнёршах.",
+      "authors": [
+        23
+      ],
+      "genres": [
+        6,
+        17
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 295,
+    "fields": {
+      "book": 99,
+      "inventory_number": "DEMO-099-1",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 296,
+    "fields": {
+      "book": 99,
+      "inventory_number": "DEMO-099-2",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 297,
+    "fields": {
+      "book": 99,
+      "inventory_number": "DEMO-099-3",
+      "status": "available"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 100,
+    "fields": {
+      "title": "Библия ядовитого дерева",
+      "isbn": "9780060786502",
+      "publication_year": 1998,
+      "description": "Американский проповедник привозит жену и дочерей в Конго, где их представления о вере и семье сталкиваются с иной культурой и политическим кризисом.",
+      "authors": [
+        77
+      ],
+      "genres": [
+        6,
+        14
+      ],
+      "is_active": true
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 298,
+    "fields": {
+      "book": 100,
+      "inventory_number": "DEMO-100-1",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 299,
+    "fields": {
+      "book": 100,
+      "inventory_number": "DEMO-100-2",
+      "status": "maintenance"
+    }
+  },
+  {
+    "model": "library.bookcopy",
+    "pk": 300,
+    "fields": {
+      "book": 100,
+      "inventory_number": "DEMO-100-3",
+      "status": "maintenance"
+    }
+  }
+]

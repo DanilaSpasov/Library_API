@@ -1,3 +1,198 @@
 from django.contrib import admin
 
-# Register your models here.
+from library.models import (
+    STATUS_AVAILABLE,
+    Author,
+    AvailabilitySubscription,
+    Book,
+    BookCopy,
+    Genre,
+    Loan,
+)
+from library.tasks import send_availability_notifications
+
+
+@admin.register(Author)
+class AuthorAdmin(admin.ModelAdmin):
+    """Настройки отображения авторов в админ-панели."""
+
+    list_display = (
+        "full_name",
+        "birth_date",
+    )
+    search_fields = ("full_name",)
+
+
+@admin.register(Genre)
+class GenreAdmin(admin.ModelAdmin):
+    """Настройки отображения жанров в админ-панели."""
+
+    list_display = ("name",)
+    search_fields = ("name",)
+
+
+@admin.register(Book)
+class BookAdmin(admin.ModelAdmin):
+    """Настройки управления книгами в админ-панели."""
+
+    list_display = (
+        "title",
+        "isbn",
+        "publication_year",
+        "is_active",
+    )
+    list_filter = (
+        "is_active",
+        "genres",
+    )
+    search_fields = (
+        "title",
+        "isbn",
+        "authors__full_name",
+    )
+    filter_horizontal = (
+        "authors",
+        "genres",
+    )
+
+    def has_delete_permission(self, request, obj=None):
+        """Запрещает физическое удаление книг."""
+        return False
+
+
+@admin.register(BookCopy)
+class BookCopyAdmin(admin.ModelAdmin):
+    """Настройки управления экземплярами книг в админ-панели."""
+
+    list_display = (
+        "inventory_number",
+        "book",
+        "status",
+    )
+    list_filter = ("status",)
+    search_fields = (
+        "inventory_number",
+        "book__title",
+        "book__isbn",
+    )
+    autocomplete_fields = ("book",)
+    list_select_related = ("book",)
+
+    def has_delete_permission(self, request, obj=None):
+        """Запрещает физическое удаление экземпляров."""
+        return False
+
+    def save_model(self, request, obj, form, change):
+        """Сохраняет экземпляр и запускает уведомление о доступности."""
+        previous_status = None
+
+        if change:
+            previous_status = (
+                BookCopy.objects.filter(id=obj.id)
+                .values_list("status", flat=True)
+                .first()
+            )
+
+        super().save_model(request, obj, form, change)
+
+        if previous_status != STATUS_AVAILABLE and obj.status == STATUS_AVAILABLE:
+            send_availability_notifications.delay(obj.book_id)
+
+
+@admin.register(Loan)
+class LoanAdmin(admin.ModelAdmin):
+    """Настройки просмотра выдач в админ-панели."""
+
+    list_display = (
+        "book_copy",
+        "reader",
+        "issued_by",
+        "issued_at",
+        "due_at",
+        "returned_at",
+        "active_status",
+        "overdue_status",
+    )
+    list_filter = (
+        "issued_at",
+        "due_at",
+        "returned_at",
+    )
+    search_fields = (
+        "book_copy__inventory_number",
+        "book_copy__book__title",
+        "reader__email",
+        "issued_by__email",
+        "returned_by__email",
+    )
+    autocomplete_fields = (
+        "reader",
+        "book_copy",
+        "issued_by",
+        "returned_by",
+    )
+    readonly_fields = (
+        "issued_at",
+        "active_status",
+        "overdue_status",
+    )
+    list_select_related = (
+        "reader",
+        "book_copy",
+        "book_copy__book",
+        "issued_by",
+        "returned_by",
+    )
+    date_hierarchy = "issued_at"
+
+    def has_add_permission(self, request):
+        """Запрещает создавать выдачи напрямую через админ-панель."""
+        return False
+
+    def has_change_permission(self, request, obj=None):
+        """Запрещает изменять выдачи напрямую через админ-панель."""
+        return False
+
+    def has_delete_permission(self, request, obj=None):
+        """Запрещает удалять выдачи через админ-панель."""
+        return False
+
+    @admin.display(boolean=True, description="Активна")
+    def active_status(self, obj):
+        """Показывает, является ли выдача активной."""
+        return obj.is_active
+
+    @admin.display(boolean=True, description="Просрочена")
+    def overdue_status(self, obj):
+        """Показывает, является ли выдача просроченной."""
+        return obj.is_overdue
+
+
+@admin.register(AvailabilitySubscription)
+class AvailabilitySubscriptionAdmin(admin.ModelAdmin):
+    """Настройки просмотра подписок в админ-панели."""
+
+    list_display = (
+        "reader",
+        "book",
+        "created_at",
+        "notified_at",
+    )
+    list_filter = (
+        "created_at",
+        "notified_at",
+    )
+    search_fields = (
+        "reader__email",
+        "book__title",
+        "book__isbn",
+    )
+    autocomplete_fields = (
+        "reader",
+        "book",
+    )
+    readonly_fields = ("created_at",)
+    list_select_related = (
+        "reader",
+        "book",
+    )

@@ -1,3 +1,125 @@
+from django.contrib.auth.base_user import BaseUserManager
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-# Create your models here.
+ROLE_READER = "reader"
+ROLE_LIBRARIAN = "librarian"
+ROLE_ADMIN = "admin"
+
+ROLE_CHOICES = (
+    (ROLE_READER, "Читатель"),
+    (ROLE_LIBRARIAN, "Библиотекарь"),
+    (ROLE_ADMIN, "Администратор"),
+)
+
+
+class UserManager(BaseUserManager):
+    """Менеджер пользователей с авторизацией по email."""
+
+    def create_user(self, email, password=None, **extra_fields):
+        """Создаёт обычного пользователя с авторизацией по email."""
+        if not email:
+            raise ValueError("Email обязателен")
+
+        extra_fields.setdefault("is_active", False)
+        extra_fields.setdefault("is_email_verified", False)
+
+        email = self.normalize_email(email)
+        user = self.model(email=email, **extra_fields)
+        user.set_password(password)
+        user.save(using=self._db)
+
+        return user
+
+    def create_superuser(self, email, password=None, **extra_fields):
+        """Создаёт суперпользователя с правами администратора."""
+        extra_fields.setdefault("role", ROLE_ADMIN)
+        extra_fields.setdefault("is_active", True)
+        extra_fields.setdefault("is_email_verified", True)
+        extra_fields.setdefault("is_staff", True)
+        extra_fields.setdefault("is_superuser", True)
+
+        if extra_fields.get("is_staff") is not True:
+            raise ValueError("Суперпользователь должен иметь is_staff=True")
+
+        if extra_fields.get("is_superuser") is not True:
+            raise ValueError("Суперпользователь должен иметь is_superuser=True")
+
+        if extra_fields.get("is_email_verified") is not True:
+            raise ValueError("Email суперпользователя должен быть подтверждён")
+
+        return self.create_user(email, password, **extra_fields)
+
+
+class User(AbstractUser):
+    """Пользователь библиотеки с авторизацией по email."""
+
+    username = None
+
+    email = models.EmailField(
+        "Электронная почта",
+        unique=True,
+    )
+    role = models.CharField(
+        "Роль",
+        max_length=20,
+        choices=ROLE_CHOICES,
+        default=ROLE_READER,
+    )
+    is_active = models.BooleanField(
+        "Активен",
+        default=False,
+    )
+    is_email_verified = models.BooleanField(
+        "Email подтверждён",
+        default=False,
+    )
+    telegram_chat_id = models.BigIntegerField(
+        "Telegram chat ID",
+        null=True,
+        blank=True,
+        unique=True,
+    )
+
+    USERNAME_FIELD = "email"
+    REQUIRED_FIELDS = []
+
+    objects = UserManager()
+
+    class Meta:
+        """Названия модели пользователя в админ-панели."""
+
+        verbose_name = "Пользователь"
+        verbose_name_plural = "Пользователи"
+
+    def __str__(self):
+        """Возвращает email пользователя."""
+        return self.email
+
+
+class TelegramConnectionCode(models.Model):
+    """Одноразовый код для привязки Telegram-аккаунта."""
+
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+        related_name="telegram_connection_code",
+        verbose_name="Пользователь",
+    )
+    code_hash = models.CharField(
+        "Хеш кода",
+        max_length=64,
+        unique=True,
+    )
+    expires_at = models.DateTimeField("Действует до")
+    created_at = models.DateTimeField("Создан", auto_now_add=True)
+
+    class Meta:
+        """Названия модели Telegram-кода в админ-панели."""
+
+        verbose_name = "Код подключения Telegram"
+        verbose_name_plural = "Коды подключения Telegram"
+
+    def __str__(self):
+        """Возвращает описание кода подключения."""
+        return f"Код подключения для {self.user}"

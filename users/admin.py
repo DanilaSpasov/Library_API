@@ -1,3 +1,114 @@
 from django.contrib import admin
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
-# Register your models here.
+from users.models import TelegramConnectionCode, User
+
+
+@admin.register(User)
+class UserAdmin(BaseUserAdmin):
+    """Настройки отображения пользователей в админ-панели."""
+
+    ordering = ("email",)
+    list_display = (
+        "email",
+        "first_name",
+        "last_name",
+        "role",
+        "is_active",
+        "is_email_verified",
+        "telegram_chat_id",
+        "is_staff",
+    )
+    list_filter = (
+        "role",
+        "is_active",
+        "is_email_verified",
+        "is_staff",
+        "is_superuser",
+    )
+    search_fields = (
+        "email",
+        "first_name",
+        "last_name",
+        "telegram_chat_id",
+    )
+    readonly_fields = (
+        "last_login",
+        "date_joined",
+    )
+
+    fieldsets = (
+        (
+            None,
+            {
+                "fields": (
+                    "email",
+                    "password",
+                ),
+            },
+        ),
+        (
+            "Личная информация",
+            {
+                "fields": (
+                    "first_name",
+                    "last_name",
+                ),
+            },
+        ),
+        (
+            "Роль и права доступа",
+            {
+                "fields": (
+                    "role",
+                    "is_active",
+                    "is_email_verified",
+                    "telegram_chat_id",
+                    "is_staff",
+                    "is_superuser",
+                    "groups",
+                    "user_permissions",
+                ),
+            },
+        ),
+        (
+            "Важные даты",
+            {
+                "fields": (
+                    "last_login",
+                    "date_joined",
+                ),
+            },
+        ),
+    )
+
+    add_fieldsets = (
+        (
+            None,
+            {
+                "classes": ("wide",),
+                "fields": (
+                    "email",
+                    "password1",
+                    "password2",
+                    "first_name",
+                    "last_name",
+                    "role",
+                    "is_active",
+                    "is_email_verified",
+                    "telegram_chat_id",
+                    "is_staff",
+                    "is_superuser",
+                ),
+            },
+        ),
+    )
+
+
+@admin.register(TelegramConnectionCode)
+class TelegramConnectionCodeAdmin(admin.ModelAdmin):
+    """Настройки отображения Telegram-кодов в админ-панели."""
+
+    list_display = ("user", "created_at", "expires_at")
+    search_fields = ("user__email",)
+    readonly_fields = ("user", "code_hash", "created_at", "expires_at")
